@@ -6,10 +6,10 @@ package vista;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import contolador.UsuarioDAO;
+//import contolador.UsuarioDAO;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
-import modelo.Usuario;
+//import modelo.Usuario;
 
 /**
  *
@@ -131,8 +131,8 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 290, 20));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel2.setText("EMPRESA");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 180, 110, -1));
+        jLabel2.setText("Northwind");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 180, 120, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/building.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 250, 250));
@@ -203,7 +203,7 @@ public class Login extends javax.swing.JFrame {
     
     
     private void btnIngresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresar1ActionPerformed
-        if (verificar()) {
+        /*if (verificar()) {
             SwingUtilities.invokeLater(new Runnable() {
 		@Override
                 public void run() {
@@ -213,7 +213,7 @@ public class Login extends javax.swing.JFrame {
             setVisible(false);
 	}else {
             JOptionPane.showMessageDialog(null, "El nombre de usuario o la contraseña son incorrectos");
-	}
+	}*/
     }//GEN-LAST:event_btnIngresar1ActionPerformed
 
     
@@ -227,7 +227,7 @@ public class Login extends javax.swing.JFrame {
      */
     //public stat
     
-    public boolean verificar() {
+    /*public boolean verificar() {
 	try {
             UsuarioDAO uDAO = new UsuarioDAO();
             ArrayList<Usuario> listaUsuarios = uDAO.buscarUsuario("SELECT * FROM Usuario WHERE Nombre = '"+jtfUsuario.getText()+"'");
@@ -240,7 +240,7 @@ public class Login extends javax.swing.JFrame {
             e.printStackTrace();
 	}
 	return false;
-    }
+    }*/
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;

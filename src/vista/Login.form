@@ -203,11 +203,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Century Gothic" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="EMPRESA"/>
+            <Property name="text" type="java.lang.String" value="Northwind"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="433" y="180" width="110" height="-1"/>
+              <AbsoluteConstraints x="423" y="180" width="120" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
