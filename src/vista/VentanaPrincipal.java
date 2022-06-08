@@ -299,10 +299,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jpOrdersMouseClicked
 
     private void jpShippersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpShippersMouseClicked
-        /*MenuProyecto mp = new MenuProyecto();
-        mostrarPanelMenuABCC(mp);
-        mp.mostrarTabla("SELECT * FROM proyecto");
-        mp.mostrarTabla2();*/
+        MenuShippers ms = new MenuShippers();
+        mostrarPanelMenuABCC(ms);
+        //ms.mostrarTabla("SELECT * FROM proyecto");
+        //ms.mostrarTabla2();
     }//GEN-LAST:event_jpShippersMouseClicked
 
     private void jpHorasEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpHorasEmpleadoMouseClicked
