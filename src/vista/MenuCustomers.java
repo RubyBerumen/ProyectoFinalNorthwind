@@ -50,7 +50,7 @@ public class MenuCustomers extends javax.swing.JPanel {
         Titulo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         CustomerID = new javax.swing.JLabel();
-        jtfCusromerID = new javax.swing.JTextField();
+        jtfCustomerID = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         CompanyName = new javax.swing.JLabel();
         jtfCompanyName = new javax.swing.JTextField();
@@ -231,23 +231,23 @@ public class MenuCustomers extends javax.swing.JPanel {
         CustomerID.setText("Customer ID");
         jpAltas.add(CustomerID, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 30));
 
-        jtfCusromerID.setBackground(new java.awt.Color(245, 198, 165));
-        jtfCusromerID.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfCusromerID.setBorder(null);
-        jtfCusromerID.addActionListener(new java.awt.event.ActionListener() {
+        jtfCustomerID.setBackground(new java.awt.Color(245, 198, 165));
+        jtfCustomerID.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfCustomerID.setBorder(null);
+        jtfCustomerID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfCusromerIDActionPerformed(evt);
+                jtfCustomerIDActionPerformed(evt);
             }
         });
-        jtfCusromerID.addKeyListener(new java.awt.event.KeyAdapter() {
+        jtfCustomerID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jtfCusromerIDKeyPressed(evt);
+                jtfCustomerIDKeyPressed(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtfCusromerIDKeyTyped(evt);
+                jtfCustomerIDKeyTyped(evt);
             }
         });
-        jpAltas.add(jtfCusromerID, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 110, 70, 30));
+        jpAltas.add(jtfCustomerID, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 110, 70, 30));
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jpAltas.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 140, 70, 20));
@@ -1058,11 +1058,13 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
     private void btnBorrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar3ActionPerformed
-        restablecerComponentes();
+        restablecerComponentes(jtfCustomerID3,jtfCompanyName3,jtfContactName3,jtfContactTitle3,jtfAddress3,jtfCity3,jtfRegion3,
+                               jtfPostalCode3,jtfCountry3,jtfPhone3,jtfFax3);
     }//GEN-LAST:event_btnBorrar3ActionPerformed
 
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
-        //restablecerComponentes();
+        restablecerComponentes(jtfCustomerID2,jtfCompanyName2,jtfContactName2,jtfContactTitle2,jtfAddress2,jtfCity2,jtfRegion2,
+                               jtfPostalCode2,jtfCountry2,jtfPhone2,jtfFax2);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
@@ -1096,7 +1098,8 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfAddressKeyPressed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        restablecerComponentes();
+        restablecerComponentes(jtfCustomerID,jtfCompanyName,jtfContactName,jtfContactTitle,jtfAddress,jtfCity,jtfRegion,
+                               jtfPostalCode,jtfCountry,jtfPhone,jtfFax);
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
@@ -1131,17 +1134,17 @@ public class MenuCustomers extends javax.swing.JPanel {
         validacionLetras(evt, jtfCompanyName);
     }//GEN-LAST:event_jtfCompanyNameKeyPressed
 
-    private void jtfCusromerIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCusromerIDKeyTyped
+    private void jtfCustomerIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerIDKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfCusromerIDKeyTyped
+    }//GEN-LAST:event_jtfCustomerIDKeyTyped
 
-    private void jtfCusromerIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCusromerIDKeyPressed
-        validacionLetras(evt, jtfCusromerID);
-    }//GEN-LAST:event_jtfCusromerIDKeyPressed
+    private void jtfCustomerIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerIDKeyPressed
+        validacionLetras(evt, jtfCustomerID);
+    }//GEN-LAST:event_jtfCustomerIDKeyPressed
 
-    private void jtfCusromerIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCusromerIDActionPerformed
+    private void jtfCustomerIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCustomerIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfCusromerIDActionPerformed
+    }//GEN-LAST:event_jtfCustomerIDActionPerformed
 
     private void jtfPostalCodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPostalCodeKeyPressed
         // TODO add your handling code here:
@@ -1518,7 +1521,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     private javax.swing.JTextField jtfCountry;
     private javax.swing.JTextField jtfCountry2;
     private javax.swing.JTextField jtfCountry3;
-    private javax.swing.JTextField jtfCusromerID;
+    private javax.swing.JTextField jtfCustomerID;
     private javax.swing.JTextField jtfCustomerID1;
     private javax.swing.JTextField jtfCustomerID2;
     private javax.swing.JTextField jtfCustomerID3;
