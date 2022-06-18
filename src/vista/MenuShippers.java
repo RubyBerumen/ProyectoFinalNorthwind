@@ -171,6 +171,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpAltas.add(jtfShipperID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 50, 30));
+
+        jSeparator10.setForeground(new java.awt.Color(255, 255, 255));
         jpAltas.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 50, 20));
 
         CompanyName.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -192,6 +194,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpAltas.add(jtfCompanyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 159, 30));
+
+        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
         jpAltas.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 159, 20));
 
         Phone.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -213,6 +217,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpAltas.add(jtfPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 130, 30));
+
+        jSeparator12.setForeground(new java.awt.Color(255, 255, 255));
         jpAltas.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 120, 20));
 
         btnAgregar.setBackground(new java.awt.Color(162, 65, 107));
@@ -275,6 +281,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpBajas.add(jtfShipperID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 50, 30));
+
+        jSeparator11.setForeground(new java.awt.Color(255, 255, 255));
         jpBajas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 50, 20));
 
         btnEliminar.setBackground(new java.awt.Color(162, 65, 107));
@@ -357,6 +365,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpCambios.add(jtfShipperID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 50, 30));
+
+        jSeparator13.setForeground(new java.awt.Color(255, 255, 255));
         jpCambios.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 50, 20));
 
         CompanyName2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -378,6 +388,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpCambios.add(jtfCompanyName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 159, 30));
+
+        jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
         jpCambios.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 159, 20));
 
         Phone2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -399,6 +411,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpCambios.add(jtfPhone2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 130, 30));
+
+        jSeparator14.setForeground(new java.awt.Color(255, 255, 255));
         jpCambios.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 120, 20));
 
         jtpContenidoABCC.addTab("Cambios", jpCambios);
@@ -445,6 +459,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpConsultas.add(jtfShipperID3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 50, 30));
+
+        jSeparator15.setForeground(new java.awt.Color(255, 255, 255));
         jpConsultas.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 50, 20));
 
         CompanyName3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -466,6 +482,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpConsultas.add(jtfCompanyName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 159, 30));
+
+        jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
         jpConsultas.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 159, 20));
 
         Phone3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -487,6 +505,8 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
         jpConsultas.add(jtfPhone3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 130, 30));
+
+        jSeparator16.setForeground(new java.awt.Color(255, 255, 255));
         jpConsultas.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 120, 20));
 
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
@@ -566,11 +586,11 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
-        //restablecerComponentes(jtfNomProyecto2,jtfNumProyecto2,jtfUbiProyecto2,jtfNumDptoProyecto2);
+        restablecerComponentes(jtfShipperID2,jtfCompanyName2,jtfPhone2);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        //restablecerComponentes(jtfNomProyecto,jtfNumProyecto,jtfUbiProyecto,jtfNumDptoProyecto);
+        restablecerComponentes(jtfShipperID,jtfCompanyName,jtfPhone);
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void jtfShipperID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID1ActionPerformed
@@ -636,7 +656,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_btnGenerarGActionPerformed
 
     private void btnBorrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar3ActionPerformed
-        //restablecerComponentes();
+         restablecerComponentes(jtfShipperID3,jtfCompanyName3,jtfPhone3);
     }//GEN-LAST:event_btnBorrar3ActionPerformed
 
     private void jtfShipperID1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID1KeyPressed
