@@ -104,7 +104,7 @@ public class MenuShippers extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(245, 198, 165));
+        setBackground(new java.awt.Color(245, 205, 185));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpTitulo.setBackground(new java.awt.Color(162, 65, 107));
@@ -132,7 +132,7 @@ public class MenuShippers extends javax.swing.JPanel {
 
         add(jpTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 100));
 
-        jtpContenidoABCC.setBackground(new java.awt.Color(245, 198, 165));
+        jtpContenidoABCC.setBackground(new java.awt.Color(245, 205, 185));
         jtpContenidoABCC.setForeground(new java.awt.Color(102, 102, 102));
         jtpContenidoABCC.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jtpContenidoABCC.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -141,7 +141,7 @@ public class MenuShippers extends javax.swing.JPanel {
             }
         });
 
-        jpAltas.setBackground(new java.awt.Color(245, 198, 165));
+        jpAltas.setBackground(new java.awt.Color(245, 205, 185));
         jpAltas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
@@ -157,7 +157,7 @@ public class MenuShippers extends javax.swing.JPanel {
         ShiperID.setText("Shipper ID");
         jpAltas.add(ShiperID, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, 30));
 
-        jtfShipperID.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipperID.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipperID.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipperID.setBorder(null);
         jtfShipperID.addActionListener(new java.awt.event.ActionListener() {
@@ -180,7 +180,7 @@ public class MenuShippers extends javax.swing.JPanel {
         CompanyName.setText("Company Name");
         jpAltas.add(CompanyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, -1, 30));
 
-        jtfCompanyName.setBackground(new java.awt.Color(245, 198, 165));
+        jtfCompanyName.setBackground(new java.awt.Color(245, 205, 185));
         jtfCompanyName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfCompanyName.setBorder(null);
         jtfCompanyName.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +203,7 @@ public class MenuShippers extends javax.swing.JPanel {
         Phone.setText("Phone");
         jpAltas.add(Phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, -1, 30));
 
-        jtfPhone.setBackground(new java.awt.Color(245, 198, 165));
+        jtfPhone.setBackground(new java.awt.Color(245, 205, 185));
         jtfPhone.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfPhone.setBorder(null);
         jtfPhone.addActionListener(new java.awt.event.ActionListener() {
@@ -248,7 +248,7 @@ public class MenuShippers extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Altas", jpAltas);
 
-        jpBajas.setBackground(new java.awt.Color(245, 198, 165));
+        jpBajas.setBackground(new java.awt.Color(245, 205, 185));
         jpBajas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo1.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
@@ -264,7 +264,7 @@ public class MenuShippers extends javax.swing.JPanel {
         ShipperID1.setText("Shipper ID");
         jpBajas.add(ShipperID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, 30));
 
-        jtfShipperID1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipperID1.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipperID1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipperID1.setBorder(null);
         jtfShipperID1.addActionListener(new java.awt.event.ActionListener() {
@@ -311,7 +311,7 @@ public class MenuShippers extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Bajas", jpBajas);
 
-        jpCambios.setBackground(new java.awt.Color(245, 198, 165));
+        jpCambios.setBackground(new java.awt.Color(245, 205, 185));
         jpCambios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo2.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
@@ -351,7 +351,7 @@ public class MenuShippers extends javax.swing.JPanel {
         ShiperID2.setText("Shipper ID");
         jpCambios.add(ShiperID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, 30));
 
-        jtfShipperID2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipperID2.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipperID2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipperID2.setBorder(null);
         jtfShipperID2.addActionListener(new java.awt.event.ActionListener() {
@@ -374,7 +374,7 @@ public class MenuShippers extends javax.swing.JPanel {
         CompanyName2.setText("Company Name");
         jpCambios.add(CompanyName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, -1, 30));
 
-        jtfCompanyName2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfCompanyName2.setBackground(new java.awt.Color(245, 205, 185));
         jtfCompanyName2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfCompanyName2.setBorder(null);
         jtfCompanyName2.addActionListener(new java.awt.event.ActionListener() {
@@ -397,7 +397,7 @@ public class MenuShippers extends javax.swing.JPanel {
         Phone2.setText("Phone");
         jpCambios.add(Phone2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, -1, 30));
 
-        jtfPhone2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfPhone2.setBackground(new java.awt.Color(245, 205, 185));
         jtfPhone2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfPhone2.setBorder(null);
         jtfPhone2.addActionListener(new java.awt.event.ActionListener() {
@@ -417,7 +417,7 @@ public class MenuShippers extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Cambios", jpCambios);
 
-        jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
+        jpConsultas.setBackground(new java.awt.Color(245, 205, 185));
         jpConsultas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo3.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
@@ -445,7 +445,7 @@ public class MenuShippers extends javax.swing.JPanel {
         ShiperID3.setText("Shipper ID");
         jpConsultas.add(ShiperID3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, 30));
 
-        jtfShipperID3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipperID3.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipperID3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipperID3.setBorder(null);
         jtfShipperID3.addActionListener(new java.awt.event.ActionListener() {
@@ -468,7 +468,7 @@ public class MenuShippers extends javax.swing.JPanel {
         CompanyName3.setText("Company Name");
         jpConsultas.add(CompanyName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, -1, 30));
 
-        jtfCompanyName3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfCompanyName3.setBackground(new java.awt.Color(245, 205, 185));
         jtfCompanyName3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfCompanyName3.setBorder(null);
         jtfCompanyName3.addActionListener(new java.awt.event.ActionListener() {
@@ -491,7 +491,7 @@ public class MenuShippers extends javax.swing.JPanel {
         Phone3.setText("Phone");
         jpConsultas.add(Phone3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, -1, 30));
 
-        jtfPhone3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfPhone3.setBackground(new java.awt.Color(245, 205, 185));
         jtfPhone3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfPhone3.setBorder(null);
         jtfPhone3.addActionListener(new java.awt.event.ActionListener() {
@@ -511,7 +511,7 @@ public class MenuShippers extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
-        jpGrafica.setBackground(new java.awt.Color(245, 198, 165));
+        jpGrafica.setBackground(new java.awt.Color(245, 205, 185));
         jpGrafica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnGenerarG.setBackground(new java.awt.Color(162, 65, 107));
@@ -546,7 +546,7 @@ public class MenuShippers extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 880, 230));
+        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 920, 230));
 
         add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 960, 270));
     }// </editor-fold>//GEN-END:initComponents

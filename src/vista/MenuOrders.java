@@ -202,7 +202,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
         TabDniS = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(245, 198, 165));
+        setBackground(new java.awt.Color(245, 205, 185));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpTitulo.setBackground(new java.awt.Color(162, 65, 107));
@@ -230,7 +230,7 @@ public class MenuOrders extends javax.swing.JPanel {
 
         add(jpTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 100));
 
-        jtpContenidoABCC.setBackground(new java.awt.Color(245, 198, 165));
+        jtpContenidoABCC.setBackground(new java.awt.Color(245, 205, 185));
         jtpContenidoABCC.setForeground(new java.awt.Color(102, 102, 102));
         jtpContenidoABCC.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jtpContenidoABCC.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -244,7 +244,7 @@ public class MenuOrders extends javax.swing.JPanel {
             }
         });
 
-        jpAltas.setBackground(new java.awt.Color(245, 198, 165));
+        jpAltas.setBackground(new java.awt.Color(245, 205, 185));
         jpAltas.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jpAltas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -262,7 +262,7 @@ public class MenuOrders extends javax.swing.JPanel {
         OrderID.setText("Order ID");
         jpAltas.add(OrderID, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 30));
 
-        jtfOrderID.setBackground(new java.awt.Color(245, 198, 165));
+        jtfOrderID.setBackground(new java.awt.Color(245, 205, 185));
         jtfOrderID.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfOrderID.setBorder(null);
         jtfOrderID.addActionListener(new java.awt.event.ActionListener() {
@@ -288,7 +288,7 @@ public class MenuOrders extends javax.swing.JPanel {
         CustomerID.setText("Customer ID");
         jpAltas.add(CustomerID, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, -1, 30));
 
-        jtfCustomerID.setBackground(new java.awt.Color(245, 198, 165));
+        jtfCustomerID.setBackground(new java.awt.Color(245, 205, 185));
         jtfCustomerID.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfCustomerID.setBorder(null);
         jtfCustomerID.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -452,7 +452,7 @@ public class MenuOrders extends javax.swing.JPanel {
         Freight.setText("Freight");
         jpAltas.add(Freight, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, 30));
 
-        jtfFreight.setBackground(new java.awt.Color(245, 198, 165));
+        jtfFreight.setBackground(new java.awt.Color(245, 205, 185));
         jtfFreight.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfFreight.setBorder(null);
         jtfFreight.addActionListener(new java.awt.event.ActionListener() {
@@ -478,7 +478,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipName.setText("Ship Name");
         jpAltas.add(ShipName, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, -1, 30));
 
-        jtfShipName.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipName.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipName.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipName.setBorder(null);
         jtfShipName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -496,7 +496,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipAddress.setText("Ship Address");
         jpAltas.add(ShipAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, -1, 30));
 
-        jtfShipAddress.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipAddress.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipAddress.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipAddress.setBorder(null);
         jtfShipAddress.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -517,7 +517,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipCity.setText("Ship City");
         jpAltas.add(ShipCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 230, -1, 30));
 
-        jtfShipCity.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipCity.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipCity.setBorder(null);
         jtfShipCity.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -537,7 +537,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipRegion.setText("Ship Region");
         jpAltas.add(ShipRegion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, 30));
 
-        jtfShipRegion.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipRegion.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipRegion.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipRegion.setBorder(null);
         jtfShipRegion.addActionListener(new java.awt.event.ActionListener() {
@@ -563,7 +563,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipPostalCode.setText("Ship Postal Code");
         jpAltas.add(ShipPostalCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, -1, 30));
 
-        jtfShipPostalCode.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipPostalCode.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipPostalCode.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipPostalCode.setBorder(null);
         jtfShipPostalCode.addActionListener(new java.awt.event.ActionListener() {
@@ -589,7 +589,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipCountry.setText("Ship Country");
         jpAltas.add(ShipCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, -1, 30));
 
-        jtfShipCountry.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipCountry.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipCountry.setBorder(null);
         jtfShipCountry.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -630,7 +630,7 @@ public class MenuOrders extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Altas", jpAltas);
 
-        jpBajas.setBackground(new java.awt.Color(245, 198, 165));
+        jpBajas.setBackground(new java.awt.Color(245, 205, 185));
         jpBajas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo1.setBackground(new java.awt.Color(255, 255, 255));
@@ -647,7 +647,7 @@ public class MenuOrders extends javax.swing.JPanel {
         OrderID3.setText("Order ID");
         jpBajas.add(OrderID3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, 30));
 
-        jtfOrderID3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfOrderID3.setBackground(new java.awt.Color(245, 205, 185));
         jtfOrderID3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfOrderID3.setBorder(null);
         jtfOrderID3.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -689,7 +689,7 @@ public class MenuOrders extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Bajas", jpBajas);
 
-        jpCambios.setBackground(new java.awt.Color(245, 198, 165));
+        jpCambios.setBackground(new java.awt.Color(245, 205, 185));
         jpCambios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo2.setBackground(new java.awt.Color(255, 255, 255));
@@ -744,7 +744,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jSeparator14.setForeground(new java.awt.Color(255, 255, 255));
         jpCambios.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 70, 20));
 
-        jtfOrderID1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfOrderID1.setBackground(new java.awt.Color(245, 205, 185));
         jtfOrderID1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfOrderID1.setBorder(null);
         jtfOrderID1.addActionListener(new java.awt.event.ActionListener() {
@@ -770,7 +770,7 @@ public class MenuOrders extends javax.swing.JPanel {
         EmployeeID1.setText("Employee ID");
         jpCambios.add(EmployeeID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, -1, 30));
 
-        jtfCustomerID1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfCustomerID1.setBackground(new java.awt.Color(245, 205, 185));
         jtfCustomerID1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfCustomerID1.setBorder(null);
         jtfCustomerID1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -920,7 +920,7 @@ public class MenuOrders extends javax.swing.JPanel {
         Freight1.setText("Freight");
         jpCambios.add(Freight1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, 30));
 
-        jtfFreight1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfFreight1.setBackground(new java.awt.Color(245, 205, 185));
         jtfFreight1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfFreight1.setBorder(null);
         jtfFreight1.addActionListener(new java.awt.event.ActionListener() {
@@ -946,7 +946,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipName1.setText("Ship Name");
         jpCambios.add(ShipName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, -1, 30));
 
-        jtfShipName1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipName1.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipName1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipName1.setBorder(null);
         jtfShipName1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -964,7 +964,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipAddress1.setText("Ship Address");
         jpCambios.add(ShipAddress1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, -1, 30));
 
-        jtfShipAddress1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipAddress1.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipAddress1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipAddress1.setBorder(null);
         jtfShipAddress1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -985,7 +985,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipCity1.setText("Ship City");
         jpCambios.add(ShipCity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 230, -1, 30));
 
-        jtfShipCity1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipCity1.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipCity1.setBorder(null);
         jtfShipCity1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1005,7 +1005,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipRegion1.setText("Ship Region");
         jpCambios.add(ShipRegion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, 30));
 
-        jtfShipRegion1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipRegion1.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipRegion1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipRegion1.setBorder(null);
         jtfShipRegion1.addActionListener(new java.awt.event.ActionListener() {
@@ -1031,7 +1031,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipPostalCode1.setText("Ship Postal Code");
         jpCambios.add(ShipPostalCode1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, -1, 30));
 
-        jtfShipPostalCode1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipPostalCode1.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipPostalCode1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipPostalCode1.setBorder(null);
         jtfShipPostalCode1.addActionListener(new java.awt.event.ActionListener() {
@@ -1057,7 +1057,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipCountry1.setText("Ship Country");
         jpCambios.add(ShipCountry1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, -1, 30));
 
-        jtfShipCountry1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipCountry1.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipCountry1.setBorder(null);
         jtfShipCountry1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1074,7 +1074,7 @@ public class MenuOrders extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Cambios", jpCambios);
 
-        jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
+        jpConsultas.setBackground(new java.awt.Color(245, 205, 185));
         jpConsultas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo3.setBackground(new java.awt.Color(255, 255, 255));
@@ -1096,7 +1096,7 @@ public class MenuOrders extends javax.swing.JPanel {
                 btnBorrar3ActionPerformed(evt);
             }
         });
-        jpConsultas.add(btnBorrar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 330, 120, 30));
+        jpConsultas.add(btnBorrar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 120, 30));
 
         ShipCountry2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         ShipCountry2.setForeground(new java.awt.Color(102, 102, 102));
@@ -1136,7 +1136,7 @@ public class MenuOrders extends javax.swing.JPanel {
         });
         jpConsultas.add(jcbAñoSD2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 170, -1, 30));
 
-        jtfShipAddress2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipAddress2.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipAddress2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipAddress2.setBorder(null);
         jtfShipAddress2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1160,7 +1160,7 @@ public class MenuOrders extends javax.swing.JPanel {
         });
         jpConsultas.add(jcbAñoRD2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, -1, 30));
 
-        jtfShipPostalCode2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipPostalCode2.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipPostalCode2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipPostalCode2.setBorder(null);
         jtfShipPostalCode2.addActionListener(new java.awt.event.ActionListener() {
@@ -1186,7 +1186,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipAddress2.setText("Ship Address");
         jpConsultas.add(ShipAddress2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, -1, 30));
 
-        jtfShipCountry2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipCountry2.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipCountry2.setBorder(null);
         jtfShipCountry2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1240,7 +1240,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ShipName2.setText("Ship Name");
         jpConsultas.add(ShipName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, -1, 30));
 
-        jtfOrderID2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfOrderID2.setBackground(new java.awt.Color(245, 205, 185));
         jtfOrderID2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfOrderID2.setBorder(null);
         jtfOrderID2.addActionListener(new java.awt.event.ActionListener() {
@@ -1258,7 +1258,7 @@ public class MenuOrders extends javax.swing.JPanel {
         });
         jpConsultas.add(jtfOrderID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 60, 30));
 
-        jtfShipName2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipName2.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipName2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipName2.setBorder(null);
         jtfShipName2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1268,7 +1268,7 @@ public class MenuOrders extends javax.swing.JPanel {
         });
         jpConsultas.add(jtfShipName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 130, 30));
 
-        jtfShipCity2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipCity2.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipCity2.setBorder(null);
         jtfShipCity2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1288,7 +1288,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jSeparator27.setForeground(new java.awt.Color(255, 255, 255));
         jpConsultas.add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 80, 20));
 
-        jtfFreight2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfFreight2.setBackground(new java.awt.Color(245, 205, 185));
         jtfFreight2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfFreight2.setBorder(null);
         jtfFreight2.addActionListener(new java.awt.event.ActionListener() {
@@ -1306,7 +1306,7 @@ public class MenuOrders extends javax.swing.JPanel {
         });
         jpConsultas.add(jtfFreight2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 50, 30));
 
-        jtfCustomerID2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfCustomerID2.setBackground(new java.awt.Color(245, 205, 185));
         jtfCustomerID2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfCustomerID2.setBorder(null);
         jtfCustomerID2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1400,7 +1400,7 @@ public class MenuOrders extends javax.swing.JPanel {
         });
         jpConsultas.add(jcbMesSD2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, -1, 30));
 
-        jtfShipRegion2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfShipRegion2.setBackground(new java.awt.Color(245, 205, 185));
         jtfShipRegion2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfShipRegion2.setBorder(null);
         jtfShipRegion2.addActionListener(new java.awt.event.ActionListener() {
@@ -1465,7 +1465,7 @@ public class MenuOrders extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 930, 190));
+        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 920, 140));
 
         TabDniS.setFont(new java.awt.Font("Century Gothic", 1, 10)); // NOI18N
         jpTabla.add(TabDniS, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, 160, 20));
@@ -1492,11 +1492,13 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        restablecerComponentes();
+        restablecerComponentes(jtfOrderID,jtfCustomerID,jcbEmployeeID,jcbDiaOD,jcbMesOD,jcbAñoOD,jcbDiaRD,jcbMesRD,jcbAñoRD,
+                               jcbDiaSD,jcbMesSD,jcbAñoSD,jcbSV,jtfFreight,jtfShipName,jtfShipAddress,jtfShipCity,jtfShipRegion,
+                               jtfShipPostalCode,jtfShipCountry);
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnBorrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar1ActionPerformed
-        restablecerComponentes();
+        restablecerComponentes(jtfOrderID3);
     }//GEN-LAST:event_btnBorrar1ActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -1538,7 +1540,9 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfOrderID3KeyReleased
 
     private void btnBorrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar3ActionPerformed
-        restablecerComponentes();
+        restablecerComponentes(jtfOrderID2,jtfCustomerID2,jcbEmployeeID2,jcbDiaOD2,jcbMesOD2,jcbAñoOD2,jcbDiaRD2,jcbMesRD2,jcbAñoRD2,
+                               jcbDiaSD2,jcbMesSD2,jcbAñoSD2,jcbSV2,jtfFreight2,jtfShipName2,jtfShipAddress2,jtfShipCity2,jtfShipRegion2,
+                               jtfShipPostalCode2,jtfShipCountry2);
     }//GEN-LAST:event_btnBorrar3ActionPerformed
 
     private void jtfOrderIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderIDKeyPressed
@@ -1562,7 +1566,9 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfOrderID3KeyPressed
 
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
-        restablecerComponentes();
+        restablecerComponentes(jtfOrderID1,jtfCustomerID1,jcbEmployeeID1,jcbDiaOD1,jcbMesOD1,jcbAñoOD1,jcbDiaRD1,jcbMesRD1,jcbAñoRD1,
+                               jcbDiaSD1,jcbMesSD1,jcbAñoSD1,jcbSV1,jtfFreight1,jtfShipName1,jtfShipAddress1,jtfShipCity1,jtfShipRegion1,
+                               jtfShipPostalCode1,jtfShipCountry1);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed

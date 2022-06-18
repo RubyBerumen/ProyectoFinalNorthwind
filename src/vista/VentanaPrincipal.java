@@ -222,7 +222,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         background.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 700));
 
-        jpContenido.setBackground(new java.awt.Color(245, 198, 165));
+        jpContenido.setBackground(new java.awt.Color(245, 205, 185));
 
         javax.swing.GroupLayout jpContenidoLayout = new javax.swing.GroupLayout(jpContenido);
         jpContenido.setLayout(jpContenidoLayout);
