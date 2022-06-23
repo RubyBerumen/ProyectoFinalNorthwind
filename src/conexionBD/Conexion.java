@@ -10,6 +10,10 @@ import java.sql.Savepoint;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import modelo.Shippers;
+import modelo.Customers;
+import modelo.Orders;
+
 
 public class Conexion {
 
@@ -26,7 +30,7 @@ public class Conexion {
     private Conexion() {
         try {
             String url = "jdbc:sqlserver://localhost:1433;databaseName=Northwind;"
-                    + "user=as;"
+                    + "user=Ruby;"
                     + "password=aguacate;"
                     + "encrypt=true;trustServerCertificate=true;";
 
@@ -36,7 +40,7 @@ public class Conexion {
             //sp = conexionBD.setSavepoint("Inicio");
 
         } catch (SQLException e) {
-            //System.out.println("Error de Conexion");
+            System.out.println("Error de Conexion");
             e.printStackTrace();
         }
     }
@@ -85,7 +89,44 @@ public class Conexion {
         return null;
     }
 
+    //Metodos para Shippers
+    public static boolean actualizarRegistro(Shippers shipper) throws SQLException {
+        try {
+            pstm = conexionBD
+                    .prepareStatement("UPDATE Shippers SET CompanyName = ?, Phone = ? WHERE ShipperID = ? ");
+            pstm.setString(1, shipper.getCompanyName());
+            pstm.setString(2, shipper.getPhone());
+            pstm.setInt(3, shipper.getShipperID());
+            pstm.executeUpdate();
+            //conexionBD.commit();
+            return true;
+        } catch (Exception ex) {
+            //conexionBD.rollback(sp);
+            logger.log(Level.SEVERE, "Error al actualizar el proveedor", ex);
+        }
+        return false;
+
+    }
     
-  
+    public static boolean agregarRegistro(Shippers shipper) throws SQLException {
+        try {
+            pstm = conexionBD
+                    .prepareStatement("INSERT \"Shippers\"(\"CompanyName\",\"Phone\") VALUES (?, ?)");
+            pstm.setString(1, shipper.getCompanyName());
+            pstm.setString(2, shipper.getPhone());
+            pstm.executeUpdate();
+            //conexionBD.commit();
+            return true;
+        } catch (Exception ex) {
+            //conexionBD.rollback(sp);
+            logger.log(Level.SEVERE, "Error al insertar el proveedor", ex);
+        }
+        return false;
+
+    }
+
+
+    
+    
 
 }

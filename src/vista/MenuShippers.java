@@ -28,7 +28,7 @@ import javax.swing.JTextField;
 public class MenuShippers extends javax.swing.JPanel {
 
     private Component rootPane;
-    String sqlP = "SELECT * FROM proyecto";
+    String sqlS = "";
 
     /**
      * Creates new form MenuEmpleado1
@@ -591,6 +591,7 @@ public class MenuShippers extends javax.swing.JPanel {
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         restablecerComponentes(jtfShipperID,jtfCompanyName,jtfPhone);
+        
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void jtfShipperID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID1ActionPerformed
@@ -630,12 +631,12 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCompanyNameActionPerformed
 
     private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
-        mostrarTabla(sqlP);
-        mostrarTabla2();
+        //mostrarTabla(sqlP);
+        //mostrarTabla2();
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
     private void jtfCompanyNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyNameKeyPressed
-        validacionLetras(evt,jtfCompanyName);
+        validacionString(evt,jtfCompanyName);
     }//GEN-LAST:event_jtfCompanyNameKeyPressed
 
     private void jtfShipperIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperIDKeyPressed
@@ -674,7 +675,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhoneActionPerformed
 
     private void jtfPhoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhoneKeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, jtfPhone);
     }//GEN-LAST:event_jtfPhoneKeyPressed
 
     private void jtfShipperID2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID2ActionPerformed
@@ -736,9 +737,9 @@ public class MenuShippers extends javax.swing.JPanel {
     }
     
     public void mostrarTabla(String sql){
-        /*ResultSetTableModel modeloDatos = null;
+        ResultSetTableModel modeloDatos = null;
 	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:sqlserver://localhost:1433;databaseName=Northwind",sql);
 	} catch (ClassNotFoundException e1) {
             e1.printStackTrace();
 	} catch (SQLException e1) {
@@ -752,7 +753,7 @@ public class MenuShippers extends javax.swing.JPanel {
                 obtenerRegistroTabla();
             }
         });
-        jScrollPane1.getViewport().add(jTable1);*/
+        jScrollPane1.getViewport().add(jTable1);
         
     }
     
@@ -801,6 +802,16 @@ public class MenuShippers extends javax.swing.JPanel {
         }else{
             jtf.setEditable(false);
         }  
+    }
+    
+    public void validacionString(KeyEvent evt, JTextField jtf){
+        int code = evt.getKeyCode();
+        int limite = 20;
+        if ((jtf.getText().equals("")?true:!(jtf.getText().charAt(jtf.getText().length()-1)==' '&&code==KeyEvent.VK_SPACE))&&(jtf.getText().length()<limite||code==KeyEvent.VK_BACK_SPACE)) {
+                jtf.setEditable(true);
+        }else{
+                jtf.setEditable(false);
+        }
     }
     
     
