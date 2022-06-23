@@ -4,7 +4,7 @@
  */
 package vista;
 
-//import contolador.ProyectoDAO;
+
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.event.KeyEvent;
@@ -16,7 +16,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-//import modelo.Proyecto;
+import modelo.Shippers;
+import controlador.ShipperDAO;
 //import modelo.Grafica;
 
 
@@ -98,8 +99,6 @@ public class MenuShippers extends javax.swing.JPanel {
         Phone3 = new javax.swing.JLabel();
         jtfPhone3 = new javax.swing.JTextField();
         jSeparator16 = new javax.swing.JSeparator();
-        jpGrafica = new javax.swing.JPanel();
-        btnGenerarG = new javax.swing.JButton();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -511,23 +510,6 @@ public class MenuShippers extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
-        jpGrafica.setBackground(new java.awt.Color(245, 205, 185));
-        jpGrafica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnGenerarG.setBackground(new java.awt.Color(162, 65, 107));
-        btnGenerarG.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnGenerarG.setForeground(new java.awt.Color(255, 255, 255));
-        btnGenerarG.setText("Generar gráfica");
-        btnGenerarG.setBorder(null);
-        btnGenerarG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGenerarGActionPerformed(evt);
-            }
-        });
-        jpGrafica.add(btnGenerarG, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 140, 40));
-
-        jtpContenidoABCC.addTab("Gráfica", jpGrafica);
-
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 330));
 
         jpTabla.setBackground(new java.awt.Color(255, 255, 255));
@@ -551,118 +533,107 @@ public class MenuShippers extends javax.swing.JPanel {
         add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 960, 270));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-       
-        /*ProyectoDAO pDAO = new ProyectoDAO();
-        if(jtfNumProyecto1.getText().equals("")) {
-            JOptionPane.showMessageDialog(rootPane,"Debes ingresar el número de proyecto");
-	}else {
-             byte num = Byte.parseByte(jtfNumProyecto1.getText());
-            if(pDAO.eliminarRegistro(num)) {
-                JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
-            }else{
-                 JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
-            }
-           
-	}
-        mostrarTabla(sqlP);*/
-    }//GEN-LAST:event_btnEliminarActionPerformed
-
-    private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
-        /*ProyectoDAO pDAO = new ProyectoDAO();
-        if(jtfNomProyecto2.getText().equals("")||jtfNumProyecto2.getText().equals("")||
-                jtfUbiProyecto2.getText().equals("")||jtfNumDptoProyecto2.getText().equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
-        }else{
-            Proyecto p = new Proyecto(jtfNomProyecto2.getText(),Integer.parseInt(jtfNumProyecto2.getText()),
-            jtfUbiProyecto2.getText(),Byte.parseByte(jtfNumDptoProyecto2.getText()));
-            if(pDAO.modificarRegistro(p)){
-                JOptionPane.showMessageDialog(rootPane, "Datos modificados exitosamente");
-            }else{
-                JOptionPane.showMessageDialog(rootPane, "No se pudieron modificar los datos");
-            }
-            mostrarTabla(sqlP);*/
-        //}
-    }//GEN-LAST:event_btnGuardar2ActionPerformed
-
-    private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
-        restablecerComponentes(jtfShipperID2,jtfCompanyName2,jtfPhone2);
-    }//GEN-LAST:event_btnBorrar2ActionPerformed
-
-    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        restablecerComponentes(jtfShipperID,jtfCompanyName,jtfPhone);
-        
-    }//GEN-LAST:event_btnBorrarActionPerformed
-
-    private void jtfShipperID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfShipperID1ActionPerformed
-
-    private void btnBorrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar1ActionPerformed
-        restablecerComponentes(jtfShipperID1);
-    }//GEN-LAST:event_btnBorrar1ActionPerformed
-
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        /*ProyectoDAO pDAO = new ProyectoDAO();
-        if(jtfNomProyecto.getText().equals("")||jtfNumProyecto.getText().equals("")||
-                jtfUbiProyecto.getText().equals("")||jtfNumDptoProyecto.getText().equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
-        }else{
-            Proyecto p = new Proyecto(jtfNomProyecto.getText(),Integer.parseInt(jtfNumProyecto.getText()),
-            jtfUbiProyecto.getText(),Byte.parseByte(jtfNumDptoProyecto.getText()));
-            
-            if(pDAO.insertarRragistro(p)){
-                JOptionPane.showMessageDialog(rootPane,"Se agregó correctamente a la base de datos");
-            }else{
-                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar agregar a la base de datos");
-            }
-            
-        }
-        mostrarTabla(sqlP);*/
-    }//GEN-LAST:event_btnAgregarActionPerformed
-
-    private void jtfShipperIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfShipperIDActionPerformed
-
-    private void jtfCompanyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyNameActionPerformed
-        //if ((ke.getKeyChar() >= '0' && ke.getKeyChar() <= '9')||(code==KeyEvent.VK_BACK_SPACE)) {}
-        
-    }//GEN-LAST:event_jtfCompanyNameActionPerformed
-
     private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
         //mostrarTabla(sqlP);
         //mostrarTabla2();
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
-    private void jtfCompanyNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyNameKeyPressed
-        validacionString(evt,jtfCompanyName);
-    }//GEN-LAST:event_jtfCompanyNameKeyPressed
+    private void jtfPhone3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfPhone3KeyPressed
 
-    private void jtfShipperIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperIDKeyPressed
-        validacionNumeros(evt, jtfShipperID, 1);
-    }//GEN-LAST:event_jtfShipperIDKeyPressed
+    private void jtfPhone3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhone3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfPhone3ActionPerformed
 
-    private void btnGenerarGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarGActionPerformed
-       /*Grafica g = new Grafica();
-     
-       if(g.dibujar()!=null){
-           jpGrafica.setLayout(new BorderLayout());
-           jpGrafica.add(g.dibujar(),new BorderLayout().NORTH);
-           
-       }else{
-           System.out.println("No funciona");
-       }*/
-        
-    }//GEN-LAST:event_btnGenerarGActionPerformed
+    private void jtfCompanyName3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName3KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfCompanyName3KeyPressed
+
+    private void jtfCompanyName3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyName3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfCompanyName3ActionPerformed
+
+    private void jtfShipperID3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID3KeyPressed
+        validacionNumeros(evt, jtfShipperID3, 1);
+    }//GEN-LAST:event_jtfShipperID3KeyPressed
+
+    private void jtfShipperID3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfShipperID3ActionPerformed
 
     private void btnBorrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar3ActionPerformed
-         restablecerComponentes(jtfShipperID3,jtfCompanyName3,jtfPhone3);
+        restablecerComponentes(jtfShipperID3,jtfCompanyName3,jtfPhone3);
     }//GEN-LAST:event_btnBorrar3ActionPerformed
 
-    private void jtfShipperID1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID1KeyPressed
-        validacionNumeros(evt, jtfShipperID1, 1);
-    }//GEN-LAST:event_jtfShipperID1KeyPressed
+    private void jtfPhone2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone2KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfPhone2KeyPressed
+
+    private void jtfPhone2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhone2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfPhone2ActionPerformed
+
+    private void jtfCompanyName2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName2KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfCompanyName2KeyPressed
+
+    private void jtfCompanyName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyName2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfCompanyName2ActionPerformed
+
+    private void jtfShipperID2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID2KeyPressed
+        validacionNumeros(evt, jtfShipperID2, 1);
+    }//GEN-LAST:event_jtfShipperID2KeyPressed
+
+    private void jtfShipperID2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfShipperID2ActionPerformed
+
+    private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
+        restablecerComponentes(jtfShipperID2,jtfCompanyName2,jtfPhone2);
+    }//GEN-LAST:event_btnBorrar2ActionPerformed
+
+    private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
+
+        ShipperDAO sDAO = new ShipperDAO();
+        if(jtfShipperID2.getText().equals("")||jtfCompanyName2.getText().equals("")||
+            jtfPhone2.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
+        }else{
+            Shippers s = new Shippers(Integer.parseInt(jtfShipperID2.getText()),jtfCompanyName2.getText(), jtfPhone2.getText());
+            if(sDAO.modificarRegistro(s)){
+                JOptionPane.showMessageDialog(rootPane, "Datos modificados exitosamente");
+            }else{
+                JOptionPane.showMessageDialog(rootPane, "No se pudieron modificar los datos");
+            }
+            //mostrarTabla(sqlS);
+            }
+    }//GEN-LAST:event_btnGuardar2ActionPerformed
+
+    private void btnBorrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar1ActionPerformed
+        restablecerComponentes(jtfShipperID1);
+    }//GEN-LAST:event_btnBorrar1ActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+
+        ShipperDAO sDAO = new ShipperDAO();
+
+        if(jtfShipperID1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes Ingresar el id del proveedor");
+        }else{
+            int id = Integer.parseInt(jtfShipperID.getText());
+
+            if(sDAO.borrarRegistro(id)) {
+                JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
+            }
+
+        }
+
+        // mostrarTabla(sqls);
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void jtfShipperID1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID1KeyReleased
         String filtro = jtfShipperID1.getText();
@@ -670,61 +641,62 @@ public class MenuShippers extends javax.swing.JPanel {
         mostrarTabla(sql);
     }//GEN-LAST:event_jtfShipperID1KeyReleased
 
-    private void jtfPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhoneActionPerformed
+    private void jtfShipperID1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID1KeyPressed
+        validacionNumeros(evt, jtfShipperID1, 1);
+    }//GEN-LAST:event_jtfShipperID1KeyPressed
+
+    private void jtfShipperID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfPhoneActionPerformed
+    }//GEN-LAST:event_jtfShipperID1ActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        restablecerComponentes(jtfShipperID,jtfCompanyName,jtfPhone);
+
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        ShipperDAO sDAO = new ShipperDAO();
+        if(jtfShipperID.getText().equals("")||jtfPhone.getText().equals("")||
+            jtfCompanyName.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
+        }else{
+            Shippers s = new Shippers(Integer.parseInt(jtfShipperID.getText()),
+                jtfCompanyName.getText(),jtfPhone.getText());
+
+            if(sDAO.insertarRegistro(s)){
+                JOptionPane.showMessageDialog(rootPane,"Se agregó correctamente a la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar agregar a la base de datos");
+            }
+
+        }
+        //mostrarTabla(sqlS);
+    }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void jtfPhoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhoneKeyPressed
         validacionString(evt, jtfPhone);
     }//GEN-LAST:event_jtfPhoneKeyPressed
 
-    private void jtfShipperID2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID2ActionPerformed
+    private void jtfPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfShipperID2ActionPerformed
+    }//GEN-LAST:event_jtfPhoneActionPerformed
 
-    private void jtfShipperID2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID2KeyPressed
-        validacionNumeros(evt, jtfShipperID2, 1);
-    }//GEN-LAST:event_jtfShipperID2KeyPressed
+    private void jtfCompanyNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyNameKeyPressed
+        validacionString(evt,jtfCompanyName);
+    }//GEN-LAST:event_jtfCompanyNameKeyPressed
 
-    private void jtfCompanyName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyName2ActionPerformed
+    private void jtfCompanyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyNameActionPerformed
+        //if ((ke.getKeyChar() >= '0' && ke.getKeyChar() <= '9')||(code==KeyEvent.VK_BACK_SPACE)) {}
+
+    }//GEN-LAST:event_jtfCompanyNameActionPerformed
+
+    private void jtfShipperIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperIDKeyPressed
+        validacionNumeros(evt, jtfShipperID, 1);
+    }//GEN-LAST:event_jtfShipperIDKeyPressed
+
+    private void jtfShipperIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfCompanyName2ActionPerformed
-
-    private void jtfCompanyName2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName2KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfCompanyName2KeyPressed
-
-    private void jtfPhone2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhone2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfPhone2ActionPerformed
-
-    private void jtfPhone2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone2KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfPhone2KeyPressed
-
-    private void jtfShipperID3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfShipperID3ActionPerformed
-
-    private void jtfShipperID3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID3KeyPressed
-        validacionNumeros(evt, jtfShipperID3, 1);
-    }//GEN-LAST:event_jtfShipperID3KeyPressed
-
-    private void jtfCompanyName3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyName3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfCompanyName3ActionPerformed
-
-    private void jtfCompanyName3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName3KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfCompanyName3KeyPressed
-
-    private void jtfPhone3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhone3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfPhone3ActionPerformed
-
-    private void jtfPhone3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfPhone3KeyPressed
+    }//GEN-LAST:event_jtfShipperIDActionPerformed
 
     
     
@@ -837,7 +809,6 @@ public class MenuShippers extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar2;
     private javax.swing.JButton btnBorrar3;
     private javax.swing.JButton btnEliminar;
-    private javax.swing.JButton btnGenerarG;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -860,7 +831,6 @@ public class MenuShippers extends javax.swing.JPanel {
     private javax.swing.JPanel jpBajas;
     private javax.swing.JPanel jpCambios;
     private javax.swing.JPanel jpConsultas;
-    private javax.swing.JPanel jpGrafica;
     private javax.swing.JPanel jpTabla;
     private javax.swing.JPanel jpTitulo;
     private javax.swing.JTextField jtfCompanyName;

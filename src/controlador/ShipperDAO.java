@@ -65,10 +65,10 @@ public class ShipperDAO {
     }
 
 
-    public boolean borrarRegistro(Shippers shipper) {
+    public boolean borrarRegistro(int id) {
         cn.getConexion();
         boolean resultado = false;
-        String sql = "DELETE FROM Shippers WHERE ShipperID = " + shipper.getShipperID();
+        String sql = "DELETE FROM Shippers WHERE ShipperID = " + id;
         try {
 			resultado = cn.eliminarRegistro(sql);
 		} catch (SQLException e) {
