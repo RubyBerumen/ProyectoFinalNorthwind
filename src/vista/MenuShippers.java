@@ -456,6 +456,9 @@ public class MenuShippers extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfShipperID3KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfShipperID3KeyReleased(evt);
+            }
         });
         jpConsultas.add(jtfShipperID3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 50, 30));
 
@@ -479,6 +482,9 @@ public class MenuShippers extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfCompanyName3KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfCompanyName3KeyReleased(evt);
+            }
         });
         jpConsultas.add(jtfCompanyName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 159, 30));
 
@@ -501,6 +507,9 @@ public class MenuShippers extends javax.swing.JPanel {
         jtfPhone3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfPhone3KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfPhone3KeyReleased(evt);
             }
         });
         jpConsultas.add(jtfPhone3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 130, 30));
@@ -697,6 +706,24 @@ public class MenuShippers extends javax.swing.JPanel {
     private void jtfShipperIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperIDActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfShipperIDActionPerformed
+
+    private void jtfShipperID3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID3KeyReleased
+        String filtro = jtfShipperID3.getText();
+        String sql =  "SELECT * FROM Shippers WHERE ShipperID LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfShipperID3KeyReleased
+
+    private void jtfCompanyName3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName3KeyReleased
+        String filtro = jtfCompanyName3.getText();
+        String sql =  "SELECT * FROM Shippers WHERE CompanyName LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfCompanyName3KeyReleased
+
+    private void jtfPhone3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyReleased
+        String filtro = jtfPhone3.getText();
+        String sql =  "SELECT * FROM Shippers WHERE Phone LIKE '%"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfPhone3KeyReleased
 
     
     

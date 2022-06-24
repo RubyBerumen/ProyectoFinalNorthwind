@@ -824,6 +824,9 @@ public class MenuCustomers extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfCustomerID3KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfCustomerID3KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfCustomerID3KeyTyped(evt);
             }
@@ -850,6 +853,9 @@ public class MenuCustomers extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfCompanyName3KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfCompanyName3KeyReleased(evt);
+            }
         });
         jpConsultas.add(jtfCompanyName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 210, 30));
 
@@ -867,6 +873,9 @@ public class MenuCustomers extends javax.swing.JPanel {
         jtfContactName3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfContactName3KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfContactName3KeyReleased(evt);
             }
         });
         jpConsultas.add(jtfContactName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(749, 110, 170, 30));
@@ -886,6 +895,9 @@ public class MenuCustomers extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfContactTitle3KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfContactTitle3KeyReleased(evt);
+            }
         });
         jpConsultas.add(jtfContactTitle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 170, 30));
 
@@ -903,6 +915,9 @@ public class MenuCustomers extends javax.swing.JPanel {
         jtfAddress3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfAddress3KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfAddress3KeyReleased(evt);
             }
         });
         jpConsultas.add(jtfAddress3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 170, 30));
@@ -922,6 +937,9 @@ public class MenuCustomers extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfCity3KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfCity3KeyReleased(evt);
+            }
         });
         jpConsultas.add(jtfCity3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 80, 30));
 
@@ -939,6 +957,9 @@ public class MenuCustomers extends javax.swing.JPanel {
         jtfRegion3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfRegion3KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfRegion3KeyReleased(evt);
             }
         });
         jpConsultas.add(jtfRegion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 170, 60, 30));
@@ -958,6 +979,9 @@ public class MenuCustomers extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfPostalCode3KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfPostalCode3KeyReleased(evt);
+            }
         });
         jpConsultas.add(jtfPostalCode3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 90, 30));
 
@@ -975,6 +999,9 @@ public class MenuCustomers extends javax.swing.JPanel {
         jtfCountry3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfCountry3KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfCountry3KeyReleased(evt);
             }
         });
         jpConsultas.add(jtfCountry3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 90, 30));
@@ -1330,7 +1357,9 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhone3KeyPressed
 
     private void jtfPhone3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyReleased
-        // TODO add your handling code here:
+        String filtro = jtfPhone3.getText();
+        String sql =  "SELECT * FROM Customers WHERE Phone LIKE '%"+filtro+"%'";
+        mostrarTabla(sql);
     }//GEN-LAST:event_jtfPhone3KeyReleased
 
     private void jtfFax3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFax3KeyPressed
@@ -1338,8 +1367,64 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFax3KeyPressed
 
     private void jtfFax3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFax3KeyReleased
-        // TODO add your handling code here:
+        String filtro = jtfFax3.getText();
+        String sql =  "SELECT * FROM Customers WHERE Fax LIKE '%"+filtro+"%'";
+        mostrarTabla(sql);
     }//GEN-LAST:event_jtfFax3KeyReleased
+
+    private void jtfCustomerID3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID3KeyReleased
+        String filtro = jtfCustomerID3.getText();
+        String sql =  "SELECT * FROM Customers WHERE CustomerID LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfCustomerID3KeyReleased
+
+    private void jtfCompanyName3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName3KeyReleased
+        String filtro = jtfCompanyName3.getText();
+        String sql =  "SELECT * FROM Customers WHERE CompanyName LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfCompanyName3KeyReleased
+
+    private void jtfContactName3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactName3KeyReleased
+        String filtro = jtfContactName3.getText();
+        String sql =  "SELECT * FROM Customers WHERE ContactName LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfContactName3KeyReleased
+
+    private void jtfContactTitle3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactTitle3KeyReleased
+        String filtro = jtfContactTitle3.getText();
+        String sql =  "SELECT * FROM Customers WHERE ContactTitle LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfContactTitle3KeyReleased
+
+    private void jtfAddress3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAddress3KeyReleased
+        String filtro = jtfAddress3.getText();
+        String sql =  "SELECT * FROM Customers WHERE Address LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfAddress3KeyReleased
+
+    private void jtfCity3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCity3KeyReleased
+        String filtro = jtfCity3.getText();
+        String sql =  "SELECT * FROM Customers WHERE City LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfCity3KeyReleased
+
+    private void jtfRegion3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfRegion3KeyReleased
+        String filtro = jtfRegion3.getText();
+        String sql =  "SELECT * FROM Customers WHERE Region LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfRegion3KeyReleased
+
+    private void jtfPostalCode3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPostalCode3KeyReleased
+        String filtro = jtfPostalCode3.getText();
+        String sql =  "SELECT * FROM Customers WHERE PostalCode LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfPostalCode3KeyReleased
+
+    private void jtfCountry3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCountry3KeyReleased
+        String filtro = jtfCountry3.getText();
+        String sql =  "SELECT * FROM Customers WHERE Country LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfCountry3KeyReleased
 
     
     public void restablecerComponentes(Component...componentesGraficos) {
