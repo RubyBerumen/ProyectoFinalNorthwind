@@ -69,10 +69,10 @@ public class Conexion {
         try {
             pstm = conexionBD.prepareStatement(sql);
             pstm.executeUpdate();
-            conexionBD.commit();
+            //conexionBD.commit();
             return true;
         } catch (Exception ex) {
-            conexionBD.rollback(sp);
+            //conexionBD.rollback(sp);
             ex.printStackTrace();
         }
         return false;
@@ -111,8 +111,7 @@ public class Conexion {
     
     public static boolean agregarRegistro(Shippers shipper) throws SQLException {
         try {
-            pstm = conexionBD
-                    .prepareStatement("INSERT \"Shippers\"(\"CompanyName\",\"Phone\") VALUES (?, ?)");
+            pstm = conexionBD.prepareStatement("INSERT \"Shippers\"(\"CompanyName\",\"Phone\") VALUES (?, ?)");
             pstm.setString(1, shipper.getCompanyName());
             pstm.setString(2, shipper.getPhone());
             pstm.executeUpdate();
@@ -130,8 +129,8 @@ public class Conexion {
     //Metodos para customers
     public static boolean actualizarRegistro(Customers customer) throws SQLException {
         try {
-            pstm = conexionBD.prepareStatement("UPDATE Customers SET companyName = ?, contactName = ?, contactTitle = ?, "
-                    + "address = ?, city = ?, region = ?, postalCode = ?, country = ?, phone = ?, fax = ? WHERE supplierID = ?");
+            pstm = conexionBD.prepareStatement("UPDATE Customers SET CompanyName = ?, ContactName = ?, ContactTitle = ?, "
+                    + "Address = ?, City = ?, Region = ?, PostalCode = ?, Country = ?, Phone = ?, Fax = ? WHERE SupplierID = ?");
             pstm.setString(1, customer.getCompanyName());
             pstm.setString(2, customer.getContactName());
             pstm.setString(3, customer.getContactTitle());
@@ -156,8 +155,8 @@ public class Conexion {
 
     public static boolean agregarRegistro(Customers customer) throws SQLException {
         try {
-            pstm = conexionBD.prepareStatement("INSERT \"Customers\"(\"companyName\",\"contactName\",\"contactTitle\","
-                    + "\"address\",\"city\",\"region\",\"postalCode\",\"country\",\"phone\",\"fax\") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            pstm = conexionBD.prepareStatement("INSERT \"Customers\"(\"CompanyName\",\"ContactName\",\"ContactTitle\","
+                    + "\"Address\",\"City\",\"Region\",\"PostalCode\",\"Country\",\"Phone\",\"Fax\") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             pstm.setString(1, customer.getCompanyName());
             pstm.setString(2, customer.getContactName());
             pstm.setString(3, customer.getContactTitle());

@@ -72,10 +72,10 @@ public class CustomerDAO {
     }
 
     
-    public boolean borrarRegistro(Customers customer) {
+    public boolean borrarRegistro(String id) {
         cn.getConexion();
         boolean resultado = false;
-        String sql = "DELETE FROM Customers WHERE CustomerID = " + customer.getCustomerID();
+        String sql = "DELETE FROM Customers WHERE CustomerID = " + id;
         try {
             resultado = cn.eliminarRegistro(sql);
 	} catch (SQLException e) {

@@ -4,7 +4,8 @@
  */
 package vista;
 
-//import contolador.EmpleadoDAO;
+import controlador.CustomerDAO;
+import controlador.ShipperDAO;
 import java.awt.Component;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
@@ -15,8 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
-//import modelo.Empleado;
-//import modelo.Reporte;
+import modelo.Customers;
 
 /**
  *
@@ -1068,6 +1068,24 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
+        CustomerDAO cDAO = new CustomerDAO();
+        if(jtfCustomerID.getText().equals("")|| jtfCompanyName.getText().equals("")||jtfContactName.getText().equals("")
+                ||jtfContactTitle.getText().equals("")||jtfAddress.getText().equals("")||jtfCity.getText().equals("")
+                ||jtfPostalCode.getText().equals("")||jtfCountry.getText().equals("")||jtfPhone.getText().equals("")
+                ||jtfFax.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
+        }else{
+            Customers c = new Customers(jtfCustomerID.getText(),jtfCompanyName.getText(),jtfContactName.getText(),
+                            jtfContactTitle.getText(),jtfAddress.getText(),jtfCity.getText(),jtfRegion.getText(),
+                            jtfPostalCode.getText(),jtfCountry.getText(),jtfPhone.getText(),jtfFax.getText());
+            if(cDAO.modificarRegistro(c)){
+                JOptionPane.showMessageDialog(rootPane, "Datos modificados exitosamente");
+            }else{
+                JOptionPane.showMessageDialog(rootPane, "No se pudieron modificar los datos");
+            }
+            mostrarTabla(sqlC);
+            }
+
 
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
@@ -1076,7 +1094,22 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrar1ActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        CustomerDAO cDAO = new CustomerDAO();
 
+        if(jtfCustomerID1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes Ingresar el id del proveedor");
+        }else{
+            String id = jtfCustomerID1.getText();
+
+            if(cDAO.borrarRegistro(id)) {
+                JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
+            }
+
+        }
+
+        mostrarTabla(sqlC);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void jtfCustomerID1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID1KeyReleased
@@ -1103,7 +1136,25 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        CustomerDAO cDAO = new CustomerDAO();
+        if(jtfCustomerID.getText().equals("")|| jtfCompanyName.getText().equals("")||jtfContactName.getText().equals("")
+                ||jtfContactTitle.getText().equals("")||jtfAddress.getText().equals("")||jtfCity.getText().equals("")
+                ||jtfPostalCode.getText().equals("")||jtfCountry.getText().equals("")||jtfPhone.getText().equals("")
+                ||jtfFax.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
+        }else{
+            Customers c = new Customers(jtfCustomerID.getText(),jtfCompanyName.getText(),jtfContactName.getText(),
+                            jtfContactTitle.getText(),jtfAddress.getText(),jtfCity.getText(),jtfRegion.getText(),
+                            jtfPostalCode.getText(),jtfCountry.getText(),jtfPhone.getText(),jtfFax.getText());
+            System.out.println(c);
+            if(cDAO.insertarRegistro(c)){
+                JOptionPane.showMessageDialog(rootPane,"Se agregó correctamente a la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar agregar a la base de datos");
+            }
 
+        }
+        mostrarTabla(sqlC);
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void jtfPhoneKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhoneKeyReleased
@@ -1331,16 +1382,50 @@ public class MenuCustomers extends javax.swing.JPanel {
     
     public void obtenerRegistroTabla(){
         jtfCustomerID.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfCustomerID1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfCustomerID2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfCustomerID3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        
         jtfCompanyName.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfCompanyName2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfCompanyName3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        
         jtfContactName.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfContactName2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfContactName3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        
         jtfContactTitle.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
+        jtfContactTitle2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
+        jtfContactTitle3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
+        
         jtfAddress.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),4));
+        jtfAddress2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),4));
+        jtfAddress3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),4));
+        
         jtfCity.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
+        jtfCity2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
+        jtfCity3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
+        
         jtfRegion.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
+        jtfRegion2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
+        jtfRegion3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
+        
         jtfPostalCode.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
+        jtfPostalCode2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
+        jtfPostalCode3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
+
         jtfCountry.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
+        jtfCountry2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
+        jtfCountry3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
+
         jtfPhone.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
+        jtfPhone2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
+        jtfPhone3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
+
         jtfFax.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),10));
+        jtfFax2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),10));
+        jtfFax3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),10));
+
     }
     
     

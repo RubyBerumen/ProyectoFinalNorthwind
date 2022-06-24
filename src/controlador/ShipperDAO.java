@@ -24,11 +24,11 @@ public class ShipperDAO {
     	cn.getConexion();
         boolean resultado = false;
         try {
-			resultado = cn.agregarRegistro(shipper);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		resultado = cn.agregarRegistro(shipper);
+            } catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+            }
         return resultado;
     }
 
