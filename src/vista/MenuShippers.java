@@ -29,7 +29,7 @@ import controlador.ShipperDAO;
 public class MenuShippers extends javax.swing.JPanel {
 
     private Component rootPane;
-    String sqlS = "";
+    String sqlS = "SELECT * FROM Shippers";
 
     /**
      * Creates new form MenuEmpleado1
@@ -169,7 +169,7 @@ public class MenuShippers extends javax.swing.JPanel {
                 jtfShipperIDKeyPressed(evt);
             }
         });
-        jpAltas.add(jtfShipperID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 50, 30));
+        jpAltas.add(jtfShipperID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 50, 30));
 
         jSeparator10.setForeground(new java.awt.Color(255, 255, 255));
         jpAltas.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 50, 20));
@@ -534,8 +534,8 @@ public class MenuShippers extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
-        //mostrarTabla(sqlP);
-        //mostrarTabla2();
+        mostrarTabla(sqlS);
+        
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
     private void jtfPhone3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyPressed
@@ -555,7 +555,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCompanyName3ActionPerformed
 
     private void jtfShipperID3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID3KeyPressed
-        validacionNumeros(evt, jtfShipperID3, 1);
+        validacionNumeros(evt, jtfShipperID3);
     }//GEN-LAST:event_jtfShipperID3KeyPressed
 
     private void jtfShipperID3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID3ActionPerformed
@@ -583,7 +583,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCompanyName2ActionPerformed
 
     private void jtfShipperID2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID2KeyPressed
-        validacionNumeros(evt, jtfShipperID2, 1);
+        validacionNumeros(evt, jtfShipperID2);
     }//GEN-LAST:event_jtfShipperID2KeyPressed
 
     private void jtfShipperID2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID2ActionPerformed
@@ -607,7 +607,7 @@ public class MenuShippers extends javax.swing.JPanel {
             }else{
                 JOptionPane.showMessageDialog(rootPane, "No se pudieron modificar los datos");
             }
-            //mostrarTabla(sqlS);
+            mostrarTabla(sqlS);
             }
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
@@ -632,17 +632,17 @@ public class MenuShippers extends javax.swing.JPanel {
 
         }
 
-        // mostrarTabla(sqls);
+        mostrarTabla(sqlS);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void jtfShipperID1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID1KeyReleased
         String filtro = jtfShipperID1.getText();
-        String sql =  "SELECT * FROM proyecto WHERE NumProyecto LIKE '"+filtro+"%'";
+        String sql =  "SELECT * FROM Shippers WHERE ShipperID LIKE '"+filtro+"%'";
         mostrarTabla(sql);
     }//GEN-LAST:event_jtfShipperID1KeyReleased
 
     private void jtfShipperID1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperID1KeyPressed
-        validacionNumeros(evt, jtfShipperID1, 1);
+        validacionNumeros(evt, jtfShipperID1);
     }//GEN-LAST:event_jtfShipperID1KeyPressed
 
     private void jtfShipperID1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperID1ActionPerformed
@@ -651,7 +651,7 @@ public class MenuShippers extends javax.swing.JPanel {
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         restablecerComponentes(jtfShipperID,jtfCompanyName,jtfPhone);
-
+        mostrarTabla(sqlS);
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
@@ -670,7 +670,7 @@ public class MenuShippers extends javax.swing.JPanel {
             }
 
         }
-        //mostrarTabla(sqlS);
+        mostrarTabla(sqlS);
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void jtfPhoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhoneKeyPressed
@@ -691,7 +691,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCompanyNameActionPerformed
 
     private void jtfShipperIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipperIDKeyPressed
-        validacionNumeros(evt, jtfShipperID, 1);
+        validacionNumeros(evt, jtfShipperID);
     }//GEN-LAST:event_jtfShipperIDKeyPressed
 
     private void jtfShipperIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfShipperIDActionPerformed
@@ -710,8 +710,13 @@ public class MenuShippers extends javax.swing.JPanel {
     
     public void mostrarTabla(String sql){
         ResultSetTableModel modeloDatos = null;
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=Northwind;"
+                    + "user=Ruby;"
+                    + "password=aguacate;"
+                    + "encrypt=true;trustServerCertificate=true;";
+        
 	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:sqlserver://localhost:1433;databaseName=Northwind",sql);
+            modeloDatos = new ResultSetTableModel("com.microsoft.sqlserver.jdbc.SQLServerDriver",url,sql);
 	} catch (ClassNotFoundException e1) {
             e1.printStackTrace();
 	} catch (SQLException e1) {
@@ -731,30 +736,19 @@ public class MenuShippers extends javax.swing.JPanel {
     
     
     public void obtenerRegistroTabla(){
-        
-        
+        jtfShipperID.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 0));
+        jtfShipperID1.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 0));
+        jtfShipperID2.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 0));
+        jtfShipperID3.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 0));
+	jtfCompanyName.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 1));
+        jtfCompanyName2.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 1));
+        jtfCompanyName3.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 1));
+	jtfPhone.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 2));
+        jtfPhone2.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 2));
+        jtfPhone3.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 2));
     }
     
-    public void mostrarTabla2(){
-        /*ResultSetTableModel modeloDatos = null;
-	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","SELECT * FROM localizaciones_dpto");
-	} catch (ClassNotFoundException e1) {
-            e1.printStackTrace();
-	} catch (SQLException e1) {
-            e1.printStackTrace();
-	}
-        jScrollPane2.getViewport().remove(jTable2);
-        jTable2 = new JTable(modeloDatos);
-        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                obtenerRegistroTabla2();
-            }
-        });
-        jScrollPane2.getViewport().add(jTable2);*/
-        
-    }
+    
     
     
     public void validacionLetras(KeyEvent evt, JTextField jtf){  
@@ -766,9 +760,9 @@ public class MenuShippers extends javax.swing.JPanel {
         }
     }
     
-    public void validacionNumeros(KeyEvent evt, JTextField jtf, int limite){
+    public void validacionNumeros(KeyEvent evt, JTextField jtf){
         int code=evt.getKeyCode();
-        //int limite=3;    
+        int limite=3;    
         if (((evt.getKeyChar() >= '0'&&evt.getKeyChar() <= '9'))&&jtf.getText().length()<limite||(code==KeyEvent.VK_BACK_SPACE)) {
             jtf.setEditable(true);
         }else{

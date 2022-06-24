@@ -27,7 +27,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     /**
      * Creates new form MenuEmpleado1
      */
-    String sqlE = "SELECT * FROM customers";
+    String sqlC = "SELECT * FROM customers";
     private Component rootPane;
     
     public MenuCustomers() {
@@ -1050,11 +1050,11 @@ public class MenuCustomers extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtpContenidoABCCKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtpContenidoABCCKeyPressed
-        mostrarTabla(sqlE);
+        mostrarTabla(sqlC);
     }//GEN-LAST:event_jtpContenidoABCCKeyPressed
 
     private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
-        mostrarTabla(sqlE);
+        mostrarTabla(sqlC);
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
     private void btnBorrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar3ActionPerformed
@@ -1081,7 +1081,7 @@ public class MenuCustomers extends javax.swing.JPanel {
 
     private void jtfCustomerID1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID1KeyReleased
         String filtro = jtfCustomerID1.getText();
-        String sql =  "SELECT * FROM empleado WHERE Dni LIKE '"+filtro+"%'";
+        String sql =  "SELECT * FROM Customers WHERE CustomerID LIKE '"+filtro+"%'";
         mostrarTabla(sql);
     }//GEN-LAST:event_jtfCustomerID1KeyReleased
 
@@ -1303,9 +1303,14 @@ public class MenuCustomers extends javax.swing.JPanel {
 
     
     public void mostrarTabla(String sql){
-        /*ResultSetTableModel modeloDatos = null;
+        ResultSetTableModel modeloDatos = null;
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=Northwind;"
+                    + "user=Ruby;"
+                    + "password=aguacate;"
+                    + "encrypt=true;trustServerCertificate=true;";
+        
 	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
+            modeloDatos = new ResultSetTableModel("com.microsoft.sqlserver.jdbc.SQLServerDriver",url,sql);
 	} catch (ClassNotFoundException e1) {
             e1.printStackTrace();
 	} catch (SQLException e1) {
@@ -1319,28 +1324,23 @@ public class MenuCustomers extends javax.swing.JPanel {
                 obtenerRegistroTabla();
             }
         });
-        jScrollPane1.getViewport().add(jTable1);*/
+        jScrollPane1.getViewport().add(jTable1);
         
     }
     
     
     public void obtenerRegistroTabla(){
-        /*jtfNombre1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
-        jtfAp1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
-        jtfAm1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
-        jtfDni1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
-        jtfDni2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
-        Date fn = (Date) jTable1.getValueAt(jTable1.getSelectedRow(), 4);
-            String sfn = fn+"";
-            String[] na = sfn.split("-");
-            jcbDia1.setSelectedItem(na[2]);
-            jcbMes1.setSelectedItem(na[1]);
-            jcbAño1.setSelectedItem(na[0]);
-        jtfDireccion1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
-        jcbSexo1.setSelectedItem(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
-        jtfSueldo1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
-        jtfDniSuper1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
-        jtfNoDpto1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));*/
+        jtfCustomerID.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfCompanyName.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfContactName.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfContactTitle.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
+        jtfAddress.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),4));
+        jtfCity.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
+        jtfRegion.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
+        jtfPostalCode.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
+        jtfCountry.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
+        jtfPhone.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
+        jtfFax.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),10));
     }
     
     
@@ -1381,30 +1381,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }
     
     
-    public void mostrarTabla2(String sql){
-        /*ResultSetTableModel modeloDatos = null;
-	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
-	} catch (ClassNotFoundException e1) {
-            e1.printStackTrace();
-	} catch (SQLException e1) {
-            e1.printStackTrace();
-	}
-        jScrollPane2.getViewport().remove(jTable2);
-        jTable2 = new JTable(modeloDatos);
-        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                obtenerRegistroTabla2();
-            }
-        });
-        jScrollPane2.getViewport().add(jTable2);*/
-    }    
-    public void obtenerRegistroTabla2(){
-        /*jtfDniSuper.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),0));
-        jtfDniSuper1.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),0));
-        jtfDniSuper2.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),0));*/
-    }
+    
     
     
 
