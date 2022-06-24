@@ -88,6 +88,7 @@ public class Conexion {
         }
         return null;
     }
+    
 
     //Metodos para Shippers
     public static boolean actualizarRegistro(Shippers shipper) throws SQLException {
@@ -125,8 +126,57 @@ public class Conexion {
 
     }
 
-
     
+    //Metodos para customers
+    public static boolean actualizarRegistro(Customers customer) throws SQLException {
+        try {
+            pstm = conexionBD.prepareStatement("UPDATE Customers SET companyName = ?, contactName = ?, contactTitle = ?, "
+                    + "address = ?, city = ?, region = ?, postalCode = ?, country = ?, phone = ?, fax = ? WHERE supplierID = ?");
+            pstm.setString(1, customer.getCompanyName());
+            pstm.setString(2, customer.getContactName());
+            pstm.setString(3, customer.getContactTitle());
+            pstm.setString(4, customer.getAddress());
+            pstm.setString(5, customer.getCity());
+            pstm.setString(6, customer.getRegion());
+            pstm.setString(7, customer.getPostalCode());
+            pstm.setString(8, customer.getCountry());
+            pstm.setString(9, customer.getPhone());
+            pstm.setString(10, customer.getFax());
+            pstm.setString(11, customer.getCustomerID());
+            pstm.executeUpdate();
+            //conexionBD.commit();
+            return true;
+        } catch (Exception ex) {
+        	//conexionBD.rollback(sp);
+        	logger.log(Level.SEVERE,"Error al modificar el cliente",ex);
+        }
+        return false;
+    }
+    
+
+    public static boolean agregarRegistro(Customers customer) throws SQLException {
+        try {
+            pstm = conexionBD.prepareStatement("INSERT \"Customers\"(\"companyName\",\"contactName\",\"contactTitle\","
+                    + "\"address\",\"city\",\"region\",\"postalCode\",\"country\",\"phone\",\"fax\") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            pstm.setString(1, customer.getCompanyName());
+            pstm.setString(2, customer.getContactName());
+            pstm.setString(3, customer.getContactTitle());
+            pstm.setString(4, customer.getAddress());
+            pstm.setString(5, customer.getCity());
+            pstm.setString(6, customer.getRegion());
+            pstm.setString(7, customer.getPostalCode());
+            pstm.setString(8, customer.getCountry());
+            pstm.setString(9, customer.getPhone());
+            pstm.setString(10, customer.getFax());
+            pstm.executeUpdate();
+            //conexionBD.commit();
+            return true;
+        } catch (Exception ex) {
+        	//conexionBD.rollback(sp);
+        	logger.log(Level.SEVERE,"Error al insertar el cliente",ex);
+        }
+        return false;
+    }
     
 
 }

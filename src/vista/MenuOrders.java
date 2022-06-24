@@ -27,7 +27,7 @@ public class MenuOrders extends javax.swing.JPanel {
     /**
      * Creates new form MenuEmpleado1
      */
-    String sqlE = "SELECT * FROM orders";
+    String sqlO = "SELECT * FROM orders";
     private Component rootPane;
     
     public MenuOrders() {
@@ -1514,11 +1514,11 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jcbDiaODActionPerformed
 
     private void jtpContenidoABCCKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtpContenidoABCCKeyPressed
-        mostrarTabla(sqlE);
+        mostrarTabla(sqlO);
     }//GEN-LAST:event_jtpContenidoABCCKeyPressed
 
     private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
-        mostrarTabla(sqlE);
+        mostrarTabla(sqlO);
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
     private void jtfShipAddressKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipAddressKeyReleased
@@ -1916,9 +1916,14 @@ public class MenuOrders extends javax.swing.JPanel {
 
     
     public void mostrarTabla(String sql){
-        /*ResultSetTableModel modeloDatos = null;
+        ResultSetTableModel modeloDatos = null;
+        String url = "jdbc:sqlserver://localhost:1433;databaseName=Northwind;"
+                    + "user=Ruby;"
+                    + "password=aguacate;"
+                    + "encrypt=true;trustServerCertificate=true;";
+        
 	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
+            modeloDatos = new ResultSetTableModel("com.microsoft.sqlserver.jdbc.SQLServerDriver",url,sql);
 	} catch (ClassNotFoundException e1) {
             e1.printStackTrace();
 	} catch (SQLException e1) {
@@ -1932,7 +1937,7 @@ public class MenuOrders extends javax.swing.JPanel {
                 obtenerRegistroTabla();
             }
         });
-        jScrollPane1.getViewport().add(jTable1);*/
+        jScrollPane1.getViewport().add(jTable1);
         
     }
     
