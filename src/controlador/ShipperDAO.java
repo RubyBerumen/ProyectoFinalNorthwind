@@ -70,11 +70,11 @@ public class ShipperDAO {
         boolean resultado = false;
         String sql = "DELETE FROM Shippers WHERE ShipperID = " + id;
         try {
-			resultado = cn.eliminarRegistro(sql);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+            resultado = cn.eliminarRegistro(sql);
+            } catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+            }
         return resultado;
     }
 

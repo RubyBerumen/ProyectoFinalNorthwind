@@ -64,7 +64,7 @@ public class CustomerDAO {
                             rs.getString(11)));
                 } while (rs.next());
             }
-        } catch (SQLException e) {
+        } catch (SQLException ex) {
             System.out.println("error al buscar");
         }
         return lista;
