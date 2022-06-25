@@ -548,7 +548,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
     private void jtfPhone3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyPressed
-        // TODO add your handling code here:
+        validacionTelefono(evt, 24, jtfPhone3);
     }//GEN-LAST:event_jtfPhone3KeyPressed
 
     private void jtfPhone3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhone3ActionPerformed
@@ -556,7 +556,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhone3ActionPerformed
 
     private void jtfCompanyName3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName3KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt,40,jtfCompanyName3);
     }//GEN-LAST:event_jtfCompanyName3KeyPressed
 
     private void jtfCompanyName3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyName3ActionPerformed
@@ -576,7 +576,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrar3ActionPerformed
 
     private void jtfPhone2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone2KeyPressed
-        // TODO add your handling code here:
+        validacionTelefono(evt, 24, jtfPhone2);
     }//GEN-LAST:event_jtfPhone2KeyPressed
 
     private void jtfPhone2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhone2ActionPerformed
@@ -584,7 +584,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhone2ActionPerformed
 
     private void jtfCompanyName2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt,40,jtfCompanyName2);
     }//GEN-LAST:event_jtfCompanyName2KeyPressed
 
     private void jtfCompanyName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyName2ActionPerformed
@@ -683,7 +683,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void jtfPhoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhoneKeyPressed
-        validacionString(evt, jtfPhone);
+        validacionTelefono(evt, 24, jtfPhone);
     }//GEN-LAST:event_jtfPhoneKeyPressed
 
     private void jtfPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPhoneActionPerformed
@@ -691,7 +691,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhoneActionPerformed
 
     private void jtfCompanyNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyNameKeyPressed
-        validacionString(evt,jtfCompanyName);
+        validacionString(evt,40,jtfCompanyName);
     }//GEN-LAST:event_jtfCompanyNameKeyPressed
 
     private void jtfCompanyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyNameActionPerformed
@@ -783,7 +783,7 @@ public class MenuShippers extends javax.swing.JPanel {
     
     public void validacionNumeros(KeyEvent evt, JTextField jtf){
         int code=evt.getKeyCode();
-        int limite=3;    
+        int limite=2;    
         if (((evt.getKeyChar() >= '0'&&evt.getKeyChar() <= '9'))&&jtf.getText().length()<limite||(code==KeyEvent.VK_BACK_SPACE)) {
             jtf.setEditable(true);
         }else{
@@ -791,17 +791,29 @@ public class MenuShippers extends javax.swing.JPanel {
         }  
     }
     
-    public void validacionString(KeyEvent evt, JTextField jtf){
-        int code = evt.getKeyCode();
-        int limite = 20;
-        if ((jtf.getText().equals("")?true:!(jtf.getText().charAt(jtf.getText().length()-1)==' '&&code==KeyEvent.VK_SPACE))&&(jtf.getText().length()<limite||code==KeyEvent.VK_BACK_SPACE)) {
-                jtf.setEditable(true);
-        }else{
-                jtf.setEditable(false);
-        }
-    }
+    private void validacionString(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+		int code = evt.getKeyCode();
+		if ((caja.getText().equals("") || !(caja.getText().charAt(caja.getText().length() - 1) == ' ' && code == KeyEvent.VK_SPACE))
+				&& (caja.getText().length() < limite || code == KeyEvent.VK_BACK_SPACE)) {
+			caja.setEditable(true);
+		} else {
+			caja.setEditable(false);
+		}
+	}
     
     
+    private void validacionTelefono(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+		int code = evt.getKeyCode();
+		if (code == KeyEvent.VK_ENTER) {
+			caja.setEditable(true);
+		} else if (((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9') || evt.getKeyChar() == '('|| evt.getKeyChar() == ')'|| evt.getKeyChar() == '-') && caja.getText().length() < limite) {
+			caja.setEditable(true);
+		} else if (code == KeyEvent.VK_BACK_SPACE) {
+			caja.setEditable(true);
+		} else {
+			caja.setEditable(false);
+		}
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CompanyName;

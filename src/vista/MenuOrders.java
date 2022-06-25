@@ -816,7 +816,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoOD1.setBackground(new java.awt.Color(162, 65, 107));
         jcbAñoOD1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoOD1.setForeground(new java.awt.Color(102, 102, 102));
-        jcbAñoOD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAñoOD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
         jcbAñoOD1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoOD1ActionPerformed(evt);
@@ -854,7 +854,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoRD1.setBackground(new java.awt.Color(162, 65, 107));
         jcbAñoRD1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoRD1.setForeground(new java.awt.Color(102, 102, 102));
-        jcbAñoRD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAñoRD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
         jcbAñoRD1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoRD1ActionPerformed(evt);
@@ -892,7 +892,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoSD1.setBackground(new java.awt.Color(162, 65, 107));
         jcbAñoSD1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoSD1.setForeground(new java.awt.Color(102, 102, 102));
-        jcbAñoSD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAñoSD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
         jcbAñoSD1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoSD1ActionPerformed(evt);
@@ -1129,7 +1129,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoSD2.setBackground(new java.awt.Color(162, 65, 107));
         jcbAñoSD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoSD2.setForeground(new java.awt.Color(102, 102, 102));
-        jcbAñoSD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAñoSD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
         jcbAñoSD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoSD2ActionPerformed(evt);
@@ -1153,7 +1153,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoRD2.setBackground(new java.awt.Color(162, 65, 107));
         jcbAñoRD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoRD2.setForeground(new java.awt.Color(102, 102, 102));
-        jcbAñoRD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAñoRD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
         jcbAñoRD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoRD2ActionPerformed(evt);
@@ -1377,7 +1377,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoOD2.setBackground(new java.awt.Color(162, 65, 107));
         jcbAñoOD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoOD2.setForeground(new java.awt.Color(102, 102, 102));
-        jcbAñoOD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAñoOD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
         jcbAñoOD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoOD2ActionPerformed(evt);
@@ -1643,11 +1643,11 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCustomerIDKeyPressed
 
     private void jtfShipAddressKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipAddressKeyPressed
-        validacionNumeros(evt, jtfShipAddress, 10);
+        
     }//GEN-LAST:event_jtfShipAddressKeyPressed
 
     private void jtfShipCityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCityKeyPressed
-        validacionNumeros(evt, jtfShipCity, 1);
+        
     }//GEN-LAST:event_jtfShipCityKeyPressed
 
     private void jtfOrderID3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID3KeyPressed
