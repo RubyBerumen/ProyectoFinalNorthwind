@@ -1173,6 +1173,9 @@ public class MenuOrders extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfShipPostalCode2KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfShipPostalCode2KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfShipPostalCode2KeyTyped(evt);
             }
@@ -1253,6 +1256,9 @@ public class MenuOrders extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfOrderID2KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfOrderID2KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfOrderID2KeyTyped(evt);
             }
@@ -1265,6 +1271,9 @@ public class MenuOrders extends javax.swing.JPanel {
         jtfShipName2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfShipName2KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfShipName2KeyReleased(evt);
             }
         });
         jpConsultas.add(jtfShipName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 130, 30));
@@ -1301,6 +1310,9 @@ public class MenuOrders extends javax.swing.JPanel {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfFreight2KeyPressed(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfFreight2KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfFreight2KeyTyped(evt);
             }
@@ -1313,6 +1325,9 @@ public class MenuOrders extends javax.swing.JPanel {
         jtfCustomerID2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfCustomerID2KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfCustomerID2KeyReleased(evt);
             }
         });
         jpConsultas.add(jtfCustomerID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 70, 30));
@@ -1342,9 +1357,19 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbEmployeeID2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbEmployeeID2.setForeground(new java.awt.Color(102, 102, 102));
         jcbEmployeeID2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", " " }));
+        jcbEmployeeID2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jcbEmployeeID2MouseReleased(evt);
+            }
+        });
         jcbEmployeeID2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbEmployeeID2ActionPerformed(evt);
+            }
+        });
+        jcbEmployeeID2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jcbEmployeeID2KeyReleased(evt);
             }
         });
         jpConsultas.add(jcbEmployeeID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, -1, 30));
@@ -1367,9 +1392,19 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbSV2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbSV2.setForeground(new java.awt.Color(102, 102, 102));
         jcbSV2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
+        jcbSV2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jcbSV2MouseReleased(evt);
+            }
+        });
         jcbSV2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbSV2ActionPerformed(evt);
+            }
+        });
+        jcbSV2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jcbSV2KeyReleased(evt);
             }
         });
         jpConsultas.add(jcbSV2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 170, -1, 30));
@@ -1412,6 +1447,9 @@ public class MenuOrders extends javax.swing.JPanel {
         jtfShipRegion2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfShipRegion2KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfShipRegion2KeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfShipRegion2KeyTyped(evt);
@@ -1586,7 +1624,7 @@ public class MenuOrders extends javax.swing.JPanel {
 
     private void jtfOrderID3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID3KeyReleased
         String filtro = jtfOrderID3.getText();
-        String sql =  "SELECT * FROM empleado WHERE Dni LIKE '"+filtro+"%'";
+        String sql =  "SELECT * FROM Orders WHERE OrderID LIKE '"+filtro+"%'";
         mostrarTabla(sql);
     }//GEN-LAST:event_jtfOrderID3KeyReleased
 
@@ -1597,7 +1635,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrar3ActionPerformed
 
     private void jtfOrderIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderIDKeyPressed
-        validacionLetras(evt, jtfOrderID);
+        validacionNumeros(evt, jtfOrderID,5);
     }//GEN-LAST:event_jtfOrderIDKeyPressed
 
     private void jtfCustomerIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerIDKeyPressed
@@ -1613,7 +1651,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipCityKeyPressed
 
     private void jtfOrderID3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID3KeyPressed
-        validacionNumeros(evt, jtfOrderID3, 10);
+        validacionNumeros(evt, jtfOrderID3, 5);
     }//GEN-LAST:event_jtfOrderID3KeyPressed
 
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
@@ -1878,7 +1916,9 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipAddress2KeyPressed
 
     private void jtfShipAddress2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipAddress2KeyReleased
-        // TODO add your handling code here:
+        String filtro = jtfShipAddress2.getText();
+        String sql =  "SELECT * FROM Orders WHERE ShipAddress LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
     }//GEN-LAST:event_jtfShipAddress2KeyReleased
 
     private void jcbAñoRD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAñoRD2ActionPerformed
@@ -1902,7 +1942,9 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipCountry2KeyPressed
 
     private void jtfShipCountry2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCountry2KeyReleased
-        // TODO add your handling code here:
+        String filtro = jtfShipCountry2.getText();
+        String sql =  "SELECT * FROM Orders WHERE ShipCountry LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
     }//GEN-LAST:event_jtfShipCountry2KeyReleased
 
     private void jcbMesRD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMesRD2ActionPerformed
@@ -1918,11 +1960,11 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfOrderID2ActionPerformed
 
     private void jtfOrderID2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID2KeyPressed
-        // TODO add your handling code here:
+        validacionNumeros(evt, jtfOrderID2,5);
     }//GEN-LAST:event_jtfOrderID2KeyPressed
 
     private void jtfOrderID2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID2KeyTyped
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jtfOrderID2KeyTyped
 
     private void jtfShipName2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipName2KeyPressed
@@ -1934,7 +1976,9 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipCity2KeyPressed
 
     private void jtfShipCity2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCity2KeyReleased
-        // TODO add your handling code here:
+        String filtro = jtfShipCity2.getText();
+        String sql =  "SELECT * FROM Orders WHERE ShipCity LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
     }//GEN-LAST:event_jtfShipCity2KeyReleased
 
     private void jtfFreight2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfFreight2ActionPerformed
@@ -1950,7 +1994,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFreight2KeyTyped
 
     private void jtfCustomerID2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID2KeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfCustomerID2);
     }//GEN-LAST:event_jtfCustomerID2KeyPressed
 
     private void jcbEmployeeID2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbEmployeeID2ActionPerformed
@@ -1988,6 +2032,66 @@ public class MenuOrders extends javax.swing.JPanel {
     private void jcbDiaOD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDiaOD2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbDiaOD2ActionPerformed
+
+    private void jtfCustomerID2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID2KeyReleased
+        String filtro = jtfCustomerID2.getText();
+        String sql =  "SELECT * FROM Orders WHERE CustomerID LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfCustomerID2KeyReleased
+
+    private void jtfOrderID2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID2KeyReleased
+        String filtro = jtfOrderID2.getText();
+        String sql =  "SELECT * FROM Orders WHERE OrderID LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfOrderID2KeyReleased
+
+    private void jcbEmployeeID2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jcbEmployeeID2KeyReleased
+        String filtro = (String)jcbEmployeeID2.getSelectedItem();
+        String sql =  "SELECT * FROM Orders WHERE EmployeeID LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbEmployeeID2KeyReleased
+
+    private void jcbEmployeeID2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jcbEmployeeID2MouseReleased
+        String filtro = (String)jcbEmployeeID2.getSelectedItem();
+        String sql =  "SELECT * FROM Orders WHERE EmployeeID LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbEmployeeID2MouseReleased
+
+    private void jcbSV2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jcbSV2KeyReleased
+        String filtro = (String)jcbSV2.getSelectedItem();
+        String sql =  "SELECT * FROM Orders WHERE ShipVia LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbSV2KeyReleased
+
+    private void jcbSV2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jcbSV2MouseReleased
+        String filtro = (String)jcbSV2.getSelectedItem();
+        String sql =  "SELECT * FROM Orders WHERE ShipVia LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbSV2MouseReleased
+
+    private void jtfFreight2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFreight2KeyReleased
+        String filtro = jtfFreight2.getText();
+        String sql =  "SELECT * FROM Orders WHERE Freight LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfFreight2KeyReleased
+
+    private void jtfShipName2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipName2KeyReleased
+        String filtro = jtfShipName2.getText();
+        String sql =  "SELECT * FROM Orders WHERE ShipName LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfShipName2KeyReleased
+
+    private void jtfShipRegion2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipRegion2KeyReleased
+        String filtro = jtfShipRegion2.getText();
+        String sql =  "SELECT * FROM Orders WHERE ShipRegion LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfShipRegion2KeyReleased
+
+    private void jtfShipPostalCode2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipPostalCode2KeyReleased
+        String filtro = jtfShipPostalCode2.getText();
+        String sql =  "SELECT * FROM Orders WHERE ShipPostalCode LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfShipPostalCode2KeyReleased
 
     
     public void restablecerComponentes(Component...componentesGraficos) {
@@ -2029,7 +2133,36 @@ public class MenuOrders extends javax.swing.JPanel {
     
     
     public void obtenerRegistroTabla(){
-        
+        jtfOrderID1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfOrderID3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfCustomerID1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jcbEmployeeID1.setSelectedItem(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        /*Date od = (Date) jTable1.getValueAt(jTable1.getSelectedRow(), 3);
+            String sod = od+"";
+            String[] na = sod.split("/");
+            jcbDiaOD1.setSelectedItem(na[2]);
+            jcbMesOD1.setSelectedItem(na[1]);
+            jcbAñoOD1.setSelectedItem(na[0]);
+        Date rd = (Date) jTable1.getValueAt(jTable1.getSelectedRow(), 4);
+            String srd = rd+"";
+            String[] na1 = sod.split("/");
+            jcbDiaRD1.setSelectedItem(na[2]);
+            jcbMesRD1.setSelectedItem(na[1]);
+            jcbAñoRD1.setSelectedItem(na[0]);
+        Date sd = (Date) jTable1.getValueAt(jTable1.getSelectedRow(), 5);
+            String ssd = sd+"";
+            String[] na2 = ssd.split("/");
+            jcbDiaSD1.setSelectedItem(na[2]);
+            jcbMesSD1.setSelectedItem(na[1]);
+            jcbAñoSD1.setSelectedItem(na[0]);*/
+        jcbSV1.setSelectedItem(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
+        jtfFreight1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
+        jtfShipName1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
+        jtfShipAddress1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
+        jtfShipCity1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),10));
+        jtfShipRegion1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),11));
+        jtfShipPostalCode1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),12));
+        jtfShipCountry1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),13));
     }
     
     

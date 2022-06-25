@@ -169,7 +169,7 @@ public class MenuShippers extends javax.swing.JPanel {
                 jtfShipperIDKeyPressed(evt);
             }
         });
-        jpAltas.add(jtfShipperID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 50, 30));
+        jpAltas.add(jtfShipperID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 50, 30));
 
         jSeparator10.setForeground(new java.awt.Color(255, 255, 255));
         jpAltas.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 50, 20));
@@ -763,21 +763,15 @@ public class MenuShippers extends javax.swing.JPanel {
     
     
     public void obtenerRegistroTabla(){
-        jtfShipperID.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 0));
+
         jtfShipperID1.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 0));
         jtfShipperID2.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 0));
-        jtfShipperID3.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 0));
-	jtfCompanyName.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 1));
         jtfCompanyName2.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 1));
-        jtfCompanyName3.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 1));
-	jtfPhone.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 2));
         jtfPhone2.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 2));
-        jtfPhone3.setText("" + jTable1.getValueAt(jTable1.getSelectedRow(), 2));
     }
     
     
-    
-    
+   
     public void validacionLetras(KeyEvent evt, JTextField jtf){  
         char car = evt.getKeyChar();
 	if(Character.isLetter(car)||(car==KeyEvent.VK_BACK_SPACE)){
