@@ -6,10 +6,10 @@ package vista;
 
 import java.awt.Color;
 import java.util.ArrayList;
-//import contolador.UsuarioDAO;
+import controlador.UsuarioDAO;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
-//import modelo.Usuario;
+import modelo.Usuario;
 
 /**
  *
@@ -203,7 +203,7 @@ public class Login extends javax.swing.JFrame {
     
     
     private void btnIngresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresar1ActionPerformed
-        /*if (verificar()) {
+        if (verificar()) {
             SwingUtilities.invokeLater(new Runnable() {
 		@Override
                 public void run() {
@@ -213,7 +213,7 @@ public class Login extends javax.swing.JFrame {
             setVisible(false);
 	}else {
             JOptionPane.showMessageDialog(null, "El nombre de usuario o la contraseña son incorrectos");
-	}*/
+	}
     }//GEN-LAST:event_btnIngresar1ActionPerformed
 
     
@@ -227,7 +227,7 @@ public class Login extends javax.swing.JFrame {
      */
     //public stat
     
-    /*public boolean verificar() {
+    public boolean verificar() {
 	try {
             UsuarioDAO uDAO = new UsuarioDAO();
             ArrayList<Usuario> listaUsuarios = uDAO.buscarUsuario("SELECT * FROM Usuario WHERE Nombre = '"+jtfUsuario.getText()+"'");
@@ -240,7 +240,7 @@ public class Login extends javax.swing.JFrame {
             e.printStackTrace();
 	}
 	return false;
-    }*/
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;

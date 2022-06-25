@@ -805,7 +805,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbMesOD1.setBackground(new java.awt.Color(162, 65, 107));
         jcbMesOD1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMesOD1.setForeground(new java.awt.Color(102, 102, 102));
-        jcbMesOD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMesOD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
         jcbMesOD1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbMesOD1ActionPerformed(evt);
@@ -843,7 +843,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbMesRD1.setBackground(new java.awt.Color(162, 65, 107));
         jcbMesRD1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMesRD1.setForeground(new java.awt.Color(102, 102, 102));
-        jcbMesRD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMesRD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
         jcbMesRD1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbMesRD1ActionPerformed(evt);
@@ -881,7 +881,7 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbMesSD1.setBackground(new java.awt.Color(162, 65, 107));
         jcbMesSD1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMesSD1.setForeground(new java.awt.Color(102, 102, 102));
-        jcbMesSD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMesSD1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
         jcbMesSD1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbMesSD1ActionPerformed(evt);
@@ -1108,6 +1108,11 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbDiaRD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbDiaRD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbDiaRD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jcbDiaRD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbDiaRD2ItemStateChanged(evt);
+            }
+        });
         jcbDiaRD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbDiaRD2ActionPerformed(evt);
@@ -1130,6 +1135,11 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoSD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoSD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbAñoSD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
+        jcbAñoSD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbAñoSD2ItemStateChanged(evt);
+            }
+        });
         jcbAñoSD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoSD2ActionPerformed(evt);
@@ -1154,6 +1164,11 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoRD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoRD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbAñoRD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
+        jcbAñoRD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbAñoRD2ItemStateChanged(evt);
+            }
+        });
         jcbAñoRD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoRD2ActionPerformed(evt);
@@ -1206,6 +1221,11 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbMesRD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMesRD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbMesRD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMesRD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbMesRD2ItemStateChanged(evt);
+            }
+        });
         jcbMesRD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbMesRD2ActionPerformed(evt);
@@ -1232,6 +1252,11 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbDiaSD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbDiaSD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbDiaSD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jcbDiaSD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbDiaSD2ItemStateChanged(evt);
+            }
+        });
         jcbDiaSD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbDiaSD2ActionPerformed(evt);
@@ -1378,6 +1403,11 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbAñoOD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAñoOD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbAñoOD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" }));
+        jcbAñoOD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbAñoOD2ItemStateChanged(evt);
+            }
+        });
         jcbAñoOD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAñoOD2ActionPerformed(evt);
@@ -1413,6 +1443,11 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbMesOD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMesOD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbMesOD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMesOD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbMesOD2ItemStateChanged(evt);
+            }
+        });
         jcbMesOD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbMesOD2ActionPerformed(evt);
@@ -1429,6 +1464,11 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbMesSD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMesSD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbMesSD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMesSD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbMesSD2ItemStateChanged(evt);
+            }
+        });
         jcbMesSD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbMesSD2ActionPerformed(evt);
@@ -1467,9 +1507,24 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbDiaOD2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbDiaOD2.setForeground(new java.awt.Color(102, 102, 102));
         jcbDiaOD2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jcbDiaOD2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbDiaOD2ItemStateChanged(evt);
+            }
+        });
+        jcbDiaOD2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jcbDiaOD2MouseClicked(evt);
+            }
+        });
         jcbDiaOD2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbDiaOD2ActionPerformed(evt);
+            }
+        });
+        jcbDiaOD2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jcbDiaOD2KeyPressed(evt);
             }
         });
         jpConsultas.add(jcbDiaOD2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, -1, 30));
@@ -2093,6 +2148,59 @@ public class MenuOrders extends javax.swing.JPanel {
         mostrarTabla(sql);
     }//GEN-LAST:event_jtfShipPostalCode2KeyReleased
 
+    private void jcbDiaOD2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jcbDiaOD2KeyPressed
+        
+    }//GEN-LAST:event_jcbDiaOD2KeyPressed
+
+    private void jcbDiaOD2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jcbDiaOD2MouseClicked
+        
+    }//GEN-LAST:event_jcbDiaOD2MouseClicked
+
+    private void jcbDiaOD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbDiaOD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, OrderDate) = '"+jcbMesOD2.getSelectedItem()+"/"+jcbDiaOD2.getSelectedItem()+"/"+jcbAñoOD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbDiaOD2ItemStateChanged
+
+    private void jcbMesOD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbMesOD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, OrderDate) = '"+jcbMesOD2.getSelectedItem()+"/"+jcbDiaOD2.getSelectedItem()+"/"+jcbAñoOD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbMesOD2ItemStateChanged
+
+    private void jcbAñoOD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbAñoOD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, OrderDate) = '"+jcbMesOD2.getSelectedItem()+"/"+jcbDiaOD2.getSelectedItem()+"/"+jcbAñoOD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbAñoOD2ItemStateChanged
+
+    private void jcbDiaRD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbDiaRD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, RequiredDate) = '"+jcbMesRD2.getSelectedItem()+"/"+jcbDiaRD2.getSelectedItem()+"/"+jcbAñoRD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbDiaRD2ItemStateChanged
+
+    private void jcbMesRD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbMesRD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, RequiredDate) = '"+jcbMesRD2.getSelectedItem()+"/"+jcbDiaRD2.getSelectedItem()+"/"+jcbAñoRD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbMesRD2ItemStateChanged
+
+    private void jcbAñoRD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbAñoRD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, RequiredDate) = '"+jcbMesRD2.getSelectedItem()+"/"+jcbDiaRD2.getSelectedItem()+"/"+jcbAñoRD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbAñoRD2ItemStateChanged
+
+    private void jcbDiaSD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbDiaSD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, ShippedDate) = '"+jcbMesSD2.getSelectedItem()+"/"+jcbDiaSD2.getSelectedItem()+"/"+jcbAñoSD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbDiaSD2ItemStateChanged
+
+    private void jcbMesSD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbMesSD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, ShippedDate) = '"+jcbMesSD2.getSelectedItem()+"/"+jcbDiaSD2.getSelectedItem()+"/"+jcbAñoSD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbMesSD2ItemStateChanged
+
+    private void jcbAñoSD2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbAñoSD2ItemStateChanged
+        String sql =  "SELECT * FROM Orders WHERE CONVERT(DATE, ShippedDate) = '"+jcbMesSD2.getSelectedItem()+"/"+jcbDiaSD2.getSelectedItem()+"/"+jcbAñoSD2.getSelectedItem()+"'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbAñoSD2ItemStateChanged
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -2137,24 +2245,28 @@ public class MenuOrders extends javax.swing.JPanel {
         jtfOrderID3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
         jtfCustomerID1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
         jcbEmployeeID1.setSelectedItem(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
-        /*Date od = (Date) jTable1.getValueAt(jTable1.getSelectedRow(), 3);
-            String sod = od+"";
-            String[] na = sod.split("/");
+        
+        String odStr = jTable1.getValueAt(jTable1.getSelectedRow(), 3).toString();
+        odStr = odStr.substring(0,10);
+            String[] na = odStr.split("-");
             jcbDiaOD1.setSelectedItem(na[2]);
             jcbMesOD1.setSelectedItem(na[1]);
             jcbAñoOD1.setSelectedItem(na[0]);
-        Date rd = (Date) jTable1.getValueAt(jTable1.getSelectedRow(), 4);
-            String srd = rd+"";
-            String[] na1 = sod.split("/");
-            jcbDiaRD1.setSelectedItem(na[2]);
-            jcbMesRD1.setSelectedItem(na[1]);
-            jcbAñoRD1.setSelectedItem(na[0]);
-        Date sd = (Date) jTable1.getValueAt(jTable1.getSelectedRow(), 5);
-            String ssd = sd+"";
-            String[] na2 = ssd.split("/");
-            jcbDiaSD1.setSelectedItem(na[2]);
-            jcbMesSD1.setSelectedItem(na[1]);
-            jcbAñoSD1.setSelectedItem(na[0]);*/
+        
+        String rdStr = jTable1.getValueAt(jTable1.getSelectedRow(), 4).toString();
+        rdStr = rdStr.substring(0,10);
+            String[] na1 = rdStr.split("-");
+            jcbDiaRD1.setSelectedItem(na1[2]);
+            jcbMesRD1.setSelectedItem(na1[1]);
+            jcbAñoRD1.setSelectedItem(na1[0]);
+            
+        String sdStr = jTable1.getValueAt(jTable1.getSelectedRow(), 5).toString();
+        sdStr = sdStr.substring(0,10);    
+            String[] na2 = sdStr.split("-");
+            jcbDiaSD1.setSelectedItem(na2[2]);
+            jcbMesSD1.setSelectedItem(na2[1]);
+            jcbAñoSD1.setSelectedItem(na2[0]);
+
         jcbSV1.setSelectedItem(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
         jtfFreight1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
         jtfShipName1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));

@@ -68,6 +68,7 @@ public class Conexion {
     public static boolean eliminarRegistro(String sql) throws SQLException {
         try {
             pstm = conexionBD.prepareStatement(sql);
+            System.out.println(sql);
             pstm.executeUpdate();
             //conexionBD.commit();
             return true;
@@ -130,7 +131,7 @@ public class Conexion {
     public static boolean actualizarRegistro(Customers customer) throws SQLException {
         try {
             pstm = conexionBD.prepareStatement("UPDATE Customers SET CompanyName = ?, ContactName = ?, ContactTitle = ?, "
-                    + "Address = ?, City = ?, Region = ?, PostalCode = ?, Country = ?, Phone = ?, Fax = ? WHERE SupplierID = ?");
+                    + "Address = ?, City = ?, Region = ?, PostalCode = ?, Country = ?, Phone = ?, Fax = ? WHERE CustomerID = ?");
             pstm.setString(1, customer.getCompanyName());
             pstm.setString(2, customer.getContactName());
             pstm.setString(3, customer.getContactTitle());
@@ -142,6 +143,7 @@ public class Conexion {
             pstm.setString(9, customer.getPhone());
             pstm.setString(10, customer.getFax());
             pstm.setString(11, customer.getCustomerID());
+            System.out.println(customer.toString());
             pstm.executeUpdate();
             //conexionBD.commit();
             return true;
@@ -156,7 +158,7 @@ public class Conexion {
     public static boolean agregarRegistro(Customers customer) throws SQLException {
         try {
             pstm = conexionBD.prepareStatement("INSERT \"Customers\"(\"CompanyName\",\"ContactName\",\"ContactTitle\","
-                    + "\"Address\",\"City\",\"Region\",\"PostalCode\",\"Country\",\"Phone\",\"Fax\") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    + "\"Address\",\"City\",\"Region\",\"PostalCode\",\"Country\",\"Phone\",\"Fax\",\"CustomerID\") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             pstm.setString(1, customer.getCompanyName());
             pstm.setString(2, customer.getContactName());
             pstm.setString(3, customer.getContactTitle());
@@ -167,6 +169,8 @@ public class Conexion {
             pstm.setString(8, customer.getCountry());
             pstm.setString(9, customer.getPhone());
             pstm.setString(10, customer.getFax());
+            pstm.setString(11, customer.getCustomerID());
+            
             pstm.executeUpdate();
             //conexionBD.commit();
             return true;
@@ -212,7 +216,7 @@ public class Conexion {
         try {
             pstm = conexionBD.prepareStatement("INSERT \"Orders\"(\"CustomerID\",\"EmployeeID\",\"OrderDate\","
                     + "\"RequiredDate\",\"ShippedDate\",\"ShipVia\",\"Freight\",\"ShipName\",\"ShipAddress\","
-                    + "\"ShipCity\",\"ShipRegion\",\"ShipPostalCode\",\"ShipCountry\") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    + "\"ShipCity\",\"ShipRegion\",\"ShipPostalCode\",\"ShipCountry\") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             pstm.setString(1, order.getCustomerID());
             pstm.setInt(2, order.getEmployeeID());
             pstm.setString(3, order.getOrderDate());
@@ -226,6 +230,7 @@ public class Conexion {
             pstm.setString(11, order.getShipRegion());
             pstm.setString(12, order.getShipPostalCode());
             pstm.setString(13, order.getShipCountry());
+            
             pstm.executeUpdate();
             //conexionBD.commit();
             return true;

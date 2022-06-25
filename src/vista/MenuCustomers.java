@@ -1101,9 +1101,9 @@ public class MenuCustomers extends javax.swing.JPanel {
                 ||jtfCountry.getText().equals("")||jtfPhone.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
         }else{
-            Customers c = new Customers(jtfCustomerID.getText(),jtfCompanyName.getText(),jtfContactName.getText(),
-                            jtfContactTitle.getText(),jtfAddress.getText(),jtfCity.getText(),jtfRegion.getText(),
-                            jtfPostalCode.getText(),jtfCountry.getText(),jtfPhone.getText(),jtfFax.getText());
+            Customers c = new Customers(jtfCustomerID2.getText(),jtfCompanyName2.getText(),jtfContactName2.getText(),
+                            jtfContactTitle2.getText(),jtfAddress2.getText(),jtfCity2.getText(),jtfRegion2.getText(),
+                            jtfPostalCode2.getText(),jtfCountry2.getText(),jtfPhone2.getText(),jtfFax2.getText());
             if(cDAO.modificarRegistro(c)){
                 JOptionPane.showMessageDialog(rootPane, "Datos modificados exitosamente");
             }else{
