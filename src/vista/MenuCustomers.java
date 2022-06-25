@@ -1098,8 +1098,7 @@ public class MenuCustomers extends javax.swing.JPanel {
         CustomerDAO cDAO = new CustomerDAO();
         if(jtfCustomerID.getText().equals("")|| jtfCompanyName.getText().equals("")||jtfContactName.getText().equals("")
                 ||jtfContactTitle.getText().equals("")||jtfAddress.getText().equals("")||jtfCity.getText().equals("")
-                ||jtfPostalCode.getText().equals("")||jtfCountry.getText().equals("")||jtfPhone.getText().equals("")
-                ||jtfFax.getText().equals("")){
+                ||jtfCountry.getText().equals("")||jtfPhone.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
         }else{
             Customers c = new Customers(jtfCustomerID.getText(),jtfCompanyName.getText(),jtfContactName.getText(),
@@ -1146,15 +1145,15 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCustomerID1KeyReleased
 
     private void jtfCustomerID1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID1KeyPressed
-        validacionLetras(evt, jtfCustomerID1);
+        validacionLetras(evt, jtfCustomerID1,5);
     }//GEN-LAST:event_jtfCustomerID1KeyPressed
 
     private void jtfRegionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfRegionKeyPressed
-        validacionLetras(evt, jtfRegion);
+        validacionString(evt, 15, jtfRegion);
     }//GEN-LAST:event_jtfRegionKeyPressed
 
     private void jtfAddressKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAddressKeyPressed
-        validacionString(evt, jtfAddress);
+        validacionString(evt, 60 ,jtfAddress);
     }//GEN-LAST:event_jtfAddressKeyPressed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
@@ -1166,8 +1165,7 @@ public class MenuCustomers extends javax.swing.JPanel {
         CustomerDAO cDAO = new CustomerDAO();
         if(jtfCustomerID.getText().equals("")|| jtfCompanyName.getText().equals("")||jtfContactName.getText().equals("")
                 ||jtfContactTitle.getText().equals("")||jtfAddress.getText().equals("")||jtfCity.getText().equals("")
-                ||jtfPostalCode.getText().equals("")||jtfCountry.getText().equals("")||jtfPhone.getText().equals("")
-                ||jtfFax.getText().equals("")){
+                ||jtfCountry.getText().equals("")||jtfPhone.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
         }else{
             Customers c = new Customers(jtfCustomerID.getText(),jtfCompanyName.getText(),jtfContactName.getText(),
@@ -1189,27 +1187,27 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhoneKeyReleased
 
     private void jtfPhoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhoneKeyPressed
-        validacionString(evt, jtfPhone);
+        validacionTelefono(evt, 24, jtfPhone);
     }//GEN-LAST:event_jtfPhoneKeyPressed
 
     private void jtfCountryKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCountryKeyPressed
-        validacionLetras(evt, jtfCountry);
+        
     }//GEN-LAST:event_jtfCountryKeyPressed
 
     private void jtfCityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCityKeyPressed
-        validacionString(evt, jtfCity);
+        validacionString(evt, 15, jtfCity);
     }//GEN-LAST:event_jtfCityKeyPressed
 
     private void jtfContactTitleKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactTitleKeyPressed
-        validacionLetras(evt, jtfContactTitle);
+        validacionString(evt, 30, jtfContactTitle);
     }//GEN-LAST:event_jtfContactTitleKeyPressed
 
     private void jtfContactNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactNameKeyPressed
-        validacionLetras(evt, jtfContactName);
+        validacionString(evt, 30, jtfContactName);
     }//GEN-LAST:event_jtfContactNameKeyPressed
 
     private void jtfCompanyNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyNameKeyPressed
-        validacionLetras(evt, jtfCompanyName);
+        validacionString(evt, 40, jtfCompanyName);
     }//GEN-LAST:event_jtfCompanyNameKeyPressed
 
     private void jtfCustomerIDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerIDKeyTyped
@@ -1217,7 +1215,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCustomerIDKeyTyped
 
     private void jtfCustomerIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerIDKeyPressed
-        validacionLetras(evt, jtfCustomerID);
+        validacionLetras(evt, jtfCustomerID,5);
     }//GEN-LAST:event_jtfCustomerIDKeyPressed
 
     private void jtfCustomerIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCustomerIDActionPerformed
@@ -1229,7 +1227,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPostalCodeKeyPressed
 
     private void jtfFaxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFaxKeyPressed
-        validacionString(evt, jtfFax);
+        //validacionString(evt, jtfFax);
     }//GEN-LAST:event_jtfFaxKeyPressed
 
     private void jtfFaxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFaxKeyReleased
@@ -1245,7 +1243,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCustomerID2ActionPerformed
 
     private void jtfCustomerID2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID2KeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfCustomerID2, 5);
     }//GEN-LAST:event_jtfCustomerID2KeyPressed
 
     private void jtfCustomerID2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID2KeyTyped
@@ -1257,27 +1255,27 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCompanyName2ActionPerformed
 
     private void jtfCompanyName2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 40, jtfCompanyName2);
     }//GEN-LAST:event_jtfCompanyName2KeyPressed
 
     private void jtfContactName2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactName2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 30, jtfContactName2);
     }//GEN-LAST:event_jtfContactName2KeyPressed
 
     private void jtfContactTitle2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactTitle2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 30, jtfContactTitle2);
     }//GEN-LAST:event_jtfContactTitle2KeyPressed
 
     private void jtfAddress2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAddress2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 60 ,jtfAddress2);
     }//GEN-LAST:event_jtfAddress2KeyPressed
 
     private void jtfCity2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCity2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfCity2);
     }//GEN-LAST:event_jtfCity2KeyPressed
 
     private void jtfRegion2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfRegion2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfRegion2);
     }//GEN-LAST:event_jtfRegion2KeyPressed
 
     private void jtfPostalCode2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPostalCode2KeyPressed
@@ -1289,7 +1287,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCountry2KeyPressed
 
     private void jtfPhone2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone2KeyPressed
-        // TODO add your handling code here:
+        validacionTelefono(evt, 24, jtfPhone2);
     }//GEN-LAST:event_jtfPhone2KeyPressed
 
     private void jtfPhone2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone2KeyReleased
@@ -1309,7 +1307,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCustomerID3ActionPerformed
 
     private void jtfCustomerID3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID3KeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfCustomerID3, 5);
     }//GEN-LAST:event_jtfCustomerID3KeyPressed
 
     private void jtfCustomerID3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID3KeyTyped
@@ -1321,27 +1319,27 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCompanyName3ActionPerformed
 
     private void jtfCompanyName3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName3KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 40, jtfCompanyName3);
     }//GEN-LAST:event_jtfCompanyName3KeyPressed
 
     private void jtfContactName3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactName3KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 30, jtfContactName3);
     }//GEN-LAST:event_jtfContactName3KeyPressed
 
     private void jtfContactTitle3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactTitle3KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 30, jtfContactTitle);
     }//GEN-LAST:event_jtfContactTitle3KeyPressed
 
     private void jtfAddress3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAddress3KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 60 ,jtfAddress3);
     }//GEN-LAST:event_jtfAddress3KeyPressed
 
     private void jtfCity3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCity3KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfCity3);
     }//GEN-LAST:event_jtfCity3KeyPressed
 
     private void jtfRegion3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfRegion3KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfRegion3);
     }//GEN-LAST:event_jtfRegion3KeyPressed
 
     private void jtfPostalCode3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPostalCode3KeyPressed
@@ -1353,7 +1351,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCountry3KeyPressed
 
     private void jtfPhone3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyPressed
-        // TODO add your handling code here:
+        validacionTelefono(evt, 24, jtfPhone3);
     }//GEN-LAST:event_jtfPhone3KeyPressed
 
     private void jtfPhone3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyReleased
@@ -1522,14 +1520,15 @@ public class MenuCustomers extends javax.swing.JPanel {
     }
     
     
-    public void validacionLetras(KeyEvent evt, JTextField jtf){  
+    public void validacionLetras(KeyEvent evt, JTextField jtf, int lim){  
         char car = evt.getKeyChar();
-	if(Character.isLetter(car)||(car==KeyEvent.VK_BACK_SPACE)){
+        if((Character.isLetter(car))&&jtf.getText().length()<lim||(car==KeyEvent.VK_BACK_SPACE)){
             jtf.setEditable(true);
         }else{
             jtf.setEditable(false);
         }
     }
+   
     
     public void validacionNumeros(KeyEvent evt, JTextField jtf, int lim){
         int code=evt.getKeyCode();    
@@ -1540,18 +1539,31 @@ public class MenuCustomers extends javax.swing.JPanel {
         }  
     }
     
-    public void validacionString(KeyEvent evt, JTextField jtf){
-        int code = evt.getKeyCode();
-        int limite = 20;
-        if ((jtf.getText().equals("")?true:!(jtf.getText().charAt(jtf.getText().length()-1)==' '&&code==KeyEvent.VK_SPACE))&&(jtf.getText().length()<limite||code==KeyEvent.VK_BACK_SPACE)) {
-                jtf.setEditable(true);
-        }else{
-                jtf.setEditable(false);
-        }
+   private void validacionString(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+	int code = evt.getKeyCode();
+	if (code == KeyEvent.VK_ENTER) {
+            caja.setEditable(true);
+        }else if ((caja.getText().equals("") || !(caja.getText().charAt(caja.getText().length() - 1) == ' ' && code == KeyEvent.VK_SPACE))
+		&& (caja.getText().length() < limite || code == KeyEvent.VK_BACK_SPACE)) {
+		caja.setEditable(true);
+	} else {
+            caja.setEditable(false);
+	}
     }
     
     
-    
+        private void validacionTelefono(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+            int code = evt.getKeyCode();
+            if (code == KeyEvent.VK_ENTER) {
+		caja.setEditable(true);
+            } else if (((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9') || evt.getKeyChar() == '('|| evt.getKeyChar() == ')'|| evt.getKeyChar() == '-') && caja.getText().length() < limite) {
+		caja.setEditable(true);
+            } else if (code == KeyEvent.VK_BACK_SPACE) {
+		caja.setEditable(true);
+            } else {
+		caja.setEditable(false);
+            }
+	}
     
     
 
