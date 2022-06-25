@@ -17,7 +17,7 @@ public class Orders {
     private String requiredDate;
     private String shippedDate;
     private int shipVia;
-    private String freight;
+    private double freight;
     private String shipName;
     private String shipAddress;
     private String shipCity;
@@ -25,7 +25,7 @@ public class Orders {
     private String shipPostalCode;
     private String shipCountry;
 
-    public Orders(int orderID, String customerID, int employeeID, String orderDate, String requiredDate, String shippedDate, int shipVia, String freight, String shipName, String shipAddress, String shipCity, String shipRegion, String shipPostalCode, String shipCountry) {
+    public Orders(int orderID, String customerID, int employeeID, String orderDate, String requiredDate, String shippedDate, int shipVia, double freight, String shipName, String shipAddress, String shipCity, String shipRegion, String shipPostalCode, String shipCountry) {
         this.orderID = orderID;
         this.customerID = customerID;
         this.employeeID = employeeID;
@@ -70,7 +70,7 @@ public class Orders {
         return shipVia;
     }
 
-    public String getFreight() {
+    public double getFreight() {
         return freight;
     }
 
@@ -127,7 +127,7 @@ public class Orders {
         this.shipVia = shipVia;
     }
 
-    public void setFreight(String freight) {
+    public void setFreight(double freight) {
         this.freight = freight;
     }
 

@@ -178,4 +178,63 @@ public class Conexion {
     }
     
 
+    //Metodos para orders
+    public static boolean actualizarRegistro(Orders order) throws SQLException {
+        try {
+            pstm = conexionBD.prepareStatement("UPDATE Orders SET CustomerID = ?, EmployeeID = ?, OrderDate = ?, "
+                    + "RequiredDate = ?, ShippedDate = ?, ShipVia = ?, Freight = ?, ShipName = ?, ShipAddress = ?, ShipCity = ?, ShipRegion = ?, ShipPostalCode = ?, ShipCountry = ? WHERE OrderID = ?");
+            pstm.setString(1, order.getCustomerID());
+            pstm.setInt(2, order.getEmployeeID());
+            pstm.setString(3, order.getOrderDate());
+            pstm.setString(4, order.getRequiredDate());
+            pstm.setString(5, order.getShippedDate());
+            pstm.setInt(6, order.getShipVia());
+            pstm.setDouble(7, order.getFreight());
+            pstm.setString(8, order.getShipName());
+            pstm.setString(9, order.getShipAddress());
+            pstm.setString(10, order.getShipCity());
+            pstm.setString(11, order.getShipRegion());
+            pstm.setString(12, order.getShipPostalCode());
+            pstm.setString(13, order.getShipCountry());
+            pstm.setInt(14, order.getOrderID());
+            pstm.executeUpdate();
+            //conexionBD.commit();
+            return true;
+        } catch (Exception ex) {
+        	//conexionBD.rollback(sp);
+        	logger.log(Level.SEVERE,"Error al modificar el pedido",ex);
+        }
+        return false;
+    }
+
+
+    public static boolean agregarRegistro (Orders order) throws SQLException {
+        try {
+            pstm = conexionBD.prepareStatement("INSERT \"Orders\"(\"CustomerID\",\"EmployeeID\",\"OrderDate\","
+                    + "\"RequiredDate\",\"ShippedDate\",\"ShipVia\",\"Freight\",\"ShipName\",\"ShipAddress\","
+                    + "\"ShipCity\",\"ShipRegion\",\"ShipPostalCode\",\"ShipCountry\") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            pstm.setString(1, order.getCustomerID());
+            pstm.setInt(2, order.getEmployeeID());
+            pstm.setString(3, order.getOrderDate());
+            pstm.setString(4, order.getRequiredDate());
+            pstm.setString(5, order.getShippedDate());
+            pstm.setInt(6, order.getShipVia());
+            pstm.setDouble(7, order.getFreight());
+            pstm.setString(8, order.getShipName());
+            pstm.setString(9, order.getShipAddress());
+            pstm.setString(10, order.getShipCity());
+            pstm.setString(11, order.getShipRegion());
+            pstm.setString(12, order.getShipPostalCode());
+            pstm.setString(13, order.getShipCountry());
+            pstm.executeUpdate();
+            //conexionBD.commit();
+            return true;
+        } catch (Exception ex) {
+        	//conexionBD.rollback(sp);
+        	logger.log(Level.SEVERE,"Error al insertar el pedido",ex);
+        }
+        return false;
+    }
+
+
 }
