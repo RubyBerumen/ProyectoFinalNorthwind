@@ -4,7 +4,8 @@
  */
 package vista;
 
-//import contolador.EmpleadoDAO;
+import controlador.CustomerDAO;
+import controlador.OrderDAO;
 import java.awt.Component;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
@@ -15,7 +16,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
-//import modelo.Empleado;
+import modelo.Orders;
 //import modelo.Reporte;
 
 /**
@@ -1486,7 +1487,42 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfOrderIDKeyTyped
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-       
+        OrderDAO oDAO = new OrderDAO();
+        if(jtfOrderID.getText().equals("")||jtfCustomerID.getText().equals("")||jtfShipCountry.getText().equals("")
+                ||(jcbDiaOD.getSelectedItem().equals("01")&&jcbMesOD.getSelectedItem().equals("01")&&jcbAñoOD.getSelectedItem().equals("1995"))
+                ||(jcbDiaRD.getSelectedItem().equals("01")&&jcbMesRD.getSelectedItem().equals("01")&&jcbAñoRD.getSelectedItem().equals("1995"))
+                ||(jcbDiaSD.getSelectedItem().equals("01")&&jcbMesSD.getSelectedItem().equals("01")&&jcbAñoSD.getSelectedItem().equals("1995"))
+                ||jtfFreight.getText().equals("")||jtfShipName.getText().equals("")||jtfShipAddress.getText().equals("")
+                ||jtfShipCity.getText().equals("")||jtfShipRegion.getText().equals("")||jtfShipPostalCode.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar todos los campos");
+        }else{
+            int orderID = Integer.parseInt(jtfOrderID.getText());
+            String customerID = jtfCustomerID.getText();
+            String emp = (String)jcbEmployeeID.getSelectedItem();
+            int employeeID = Integer.parseInt(emp);
+            String orderDate = obtenerFecha(jcbDiaOD, jcbMesOD, jcbAñoOD);
+            String requiredDate = obtenerFecha(jcbDiaRD, jcbMesRD, jcbAñoRD);
+            String shippedDate = obtenerFecha(jcbDiaSD, jcbMesSD, jcbAñoSD);
+            String sv = (String)jcbSV.getSelectedItem();
+            int shipVia = Integer.parseInt(sv);
+            double freight = Double.parseDouble(jtfFreight.getText());
+            String shipName = jtfShipName.getText();
+            String shipAddress = jtfShipAddress.getText();
+            String shipCity = jtfShipCity.getText();
+            String shipRegion = jtfShipRegion.getText();
+            String shipPostalCode = jtfShipPostalCode.getText();
+            String shipCountry = jtfShipCountry.getText();
+            
+            Orders o = new Orders(orderID, customerID, employeeID, orderDate, requiredDate, shippedDate, shipVia, freight, 
+                                shipName, shipAddress, shipCity, shipRegion, shipPostalCode, shipCountry);
+            
+            if(oDAO.insertarRegistro(o)){
+                JOptionPane.showMessageDialog(rootPane,"Se agregó correctamente a la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar agregar a la base de datos");
+            }
+            mostrarTabla(sqlO);
+        }
         
         
     }//GEN-LAST:event_btnAgregarActionPerformed
@@ -1502,7 +1538,22 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrar1ActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-           
+        OrderDAO oDAO = new OrderDAO();
+
+        if(jtfOrderID3.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes Ingresar el id de la orden");
+        }else{
+            int id = Integer.parseInt(jtfOrderID3.getText());
+
+            if(oDAO.borrarRegistro(id)) {
+                JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
+            }
+
+        }
+
+        mostrarTabla(sqlO);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void jcbEmployeeIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbEmployeeIDActionPerformed
@@ -1572,7 +1623,42 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
-        
+        OrderDAO oDAO = new OrderDAO();
+        if(jtfOrderID.getText().equals("")||jtfCustomerID.getText().equals("")||jtfShipCountry.getText().equals("")
+                ||(jcbDiaOD.getSelectedItem().equals("01")&&jcbMesOD.getSelectedItem().equals("01")&&jcbAñoOD.getSelectedItem().equals("1995"))
+                ||(jcbDiaRD.getSelectedItem().equals("01")&&jcbMesRD.getSelectedItem().equals("01")&&jcbAñoRD.getSelectedItem().equals("1995"))
+                ||(jcbDiaSD.getSelectedItem().equals("01")&&jcbMesSD.getSelectedItem().equals("01")&&jcbAñoSD.getSelectedItem().equals("1995"))
+                ||jtfFreight.getText().equals("")||jtfShipName.getText().equals("")||jtfShipAddress.getText().equals("")
+                ||jtfShipCity.getText().equals("")||jtfShipRegion.getText().equals("")||jtfShipPostalCode.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar todos los campos");
+        }else{
+            int orderID = Integer.parseInt(jtfOrderID.getText());
+            String customerID = jtfCustomerID.getText();
+            String emp = (String)jcbEmployeeID.getSelectedItem();
+            int employeeID = Integer.parseInt(emp);
+            String orderDate = obtenerFecha(jcbDiaOD, jcbMesOD, jcbAñoOD);
+            String requiredDate = obtenerFecha(jcbDiaRD, jcbMesRD, jcbAñoRD);
+            String shippedDate = obtenerFecha(jcbDiaSD, jcbMesSD, jcbAñoSD);
+            String sv = (String)jcbSV.getSelectedItem();
+            int shipVia = Integer.parseInt(sv);
+            double freight = Double.parseDouble(jtfFreight.getText());
+            String shipName = jtfShipName.getText();
+            String shipAddress = jtfShipAddress.getText();
+            String shipCity = jtfShipCity.getText();
+            String shipRegion = jtfShipRegion.getText();
+            String shipPostalCode = jtfShipPostalCode.getText();
+            String shipCountry = jtfShipCountry.getText();
+            
+            Orders o = new Orders(orderID, customerID, employeeID, orderDate, requiredDate, shippedDate, shipVia, freight, 
+                                shipName, shipAddress, shipCity, shipRegion, shipPostalCode, shipCountry);
+            
+            if(oDAO.modificarRegistro(o)){
+                JOptionPane.showMessageDialog(rootPane,"Datos modificados exitosamente");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"No se pudieron modificar los datos");
+            }
+        }
+        mostrarTabla(sqlO);
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
     private void jcbMesODActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMesODActionPerformed
@@ -1951,7 +2037,7 @@ public class MenuOrders extends javax.swing.JPanel {
         String d = (String) dia.getSelectedItem();
         String m = (String) mes.getSelectedItem();
         String a = (String) año.getSelectedItem();
-        return a+"-"+m+"-"+d;
+        return m+"/"+d+"/"+a;
     }
     
     
