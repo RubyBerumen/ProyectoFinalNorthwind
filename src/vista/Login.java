@@ -230,8 +230,8 @@ public class Login extends javax.swing.JFrame {
     public boolean verificar() {
 	try {
             UsuarioDAO uDAO = new UsuarioDAO();
-            ArrayList<Usuario> listaUsuarios = uDAO.buscarUsuario("SELECT * FROM Usuario WHERE Nombre = '"+jtfUsuario.getText()+"'");
-			uDAO.setFiltro("SELECT * FROM Usuario WHERE nombre = '"+jtfUsuario.getText()+"'");
+            ArrayList<Usuario> listaUsuarios = uDAO.buscarUsuario("SELECT * FROM Usuarios WHERE Nombre = '"+jtfUsuario.getText()+"' AND Contraseña = '"+jtfUsuario.getText()+"'");
+			//uDAO.setFiltro("SELECT * FROM Usuarios WHERE nombre = '"+jtfUsuario.getText()+"'");
             if (listaUsuarios.size()!=0) {
 		Usuario usuario = listaUsuarios.get(0);
 		return usuario.getContraseña().equals(jpfContraseña.getText());

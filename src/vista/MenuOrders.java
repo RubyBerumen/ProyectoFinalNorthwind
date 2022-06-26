@@ -1717,30 +1717,30 @@ public class MenuOrders extends javax.swing.JPanel {
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
         OrderDAO oDAO = new OrderDAO();
-        if(jtfOrderID.getText().equals("")||jtfCustomerID.getText().equals("")||jtfShipCountry.getText().equals("")
-                ||(jcbDiaOD.getSelectedItem().equals("01")&&jcbMesOD.getSelectedItem().equals("01")&&jcbAñoOD.getSelectedItem().equals("1995"))
-                ||(jcbDiaRD.getSelectedItem().equals("01")&&jcbMesRD.getSelectedItem().equals("01")&&jcbAñoRD.getSelectedItem().equals("1995"))
-                ||(jcbDiaSD.getSelectedItem().equals("01")&&jcbMesSD.getSelectedItem().equals("01")&&jcbAñoSD.getSelectedItem().equals("1995"))
-                ||jtfFreight.getText().equals("")||jtfShipName.getText().equals("")||jtfShipAddress.getText().equals("")
-                ||jtfShipCity.getText().equals("")||jtfShipRegion.getText().equals("")||jtfShipPostalCode.getText().equals("")){
+        if(jtfOrderID1.getText().equals("")||jtfCustomerID1.getText().equals("")||jtfShipCountry1.getText().equals("")
+                ||((""+jcbDiaOD1.getSelectedItem()).equals("01")&&(""+jcbMesOD1.getSelectedItem()).equals("01")&&(""+jcbAñoOD1.getSelectedItem()).equals("1995"))
+                ||((""+jcbDiaRD1.getSelectedItem()).equals("01")&&(""+jcbMesRD1.getSelectedItem()).equals("01")&&(""+jcbAñoRD1.getSelectedItem()).equals("1995"))
+                ||((""+jcbDiaSD1.getSelectedItem()).equals("01")&&(""+jcbMesSD1.getSelectedItem()).equals("01")&&(""+jcbAñoSD1.getSelectedItem()).equals("1995"))
+                ||jtfFreight1.getText().equals("")||jtfShipName1.getText().equals("")||jtfShipAddress1.getText().equals("")
+                ||jtfShipCity1.getText().equals("")||jtfShipRegion1.getText().equals("")||jtfShipPostalCode1.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane, "Debes completar todos los campos");
         }else{
-            int orderID = Integer.parseInt(jtfOrderID.getText());
-            String customerID = jtfCustomerID.getText();
-            String emp = (String)jcbEmployeeID.getSelectedItem();
+            int orderID = Integer.parseInt(jtfOrderID1.getText());
+            String customerID = jtfCustomerID1.getText();
+            String emp = (String)jcbEmployeeID1.getSelectedItem();
             int employeeID = Integer.parseInt(emp);
-            String orderDate = obtenerFecha(jcbDiaOD, jcbMesOD, jcbAñoOD);
-            String requiredDate = obtenerFecha(jcbDiaRD, jcbMesRD, jcbAñoRD);
-            String shippedDate = obtenerFecha(jcbDiaSD, jcbMesSD, jcbAñoSD);
-            String sv = (String)jcbSV.getSelectedItem();
+            String orderDate = obtenerFecha(jcbDiaOD1, jcbMesOD1, jcbAñoOD1);
+            String requiredDate = obtenerFecha(jcbDiaRD1, jcbMesRD1, jcbAñoRD1);
+            String shippedDate = obtenerFecha(jcbDiaSD1, jcbMesSD1, jcbAñoSD1);
+            String sv = (String)jcbSV1.getSelectedItem();
             int shipVia = Integer.parseInt(sv);
-            double freight = Double.parseDouble(jtfFreight.getText());
-            String shipName = jtfShipName.getText();
-            String shipAddress = jtfShipAddress.getText();
-            String shipCity = jtfShipCity.getText();
-            String shipRegion = jtfShipRegion.getText();
-            String shipPostalCode = jtfShipPostalCode.getText();
-            String shipCountry = jtfShipCountry.getText();
+            double freight = Double.parseDouble(jtfFreight1.getText());
+            String shipName = jtfShipName1.getText();
+            String shipAddress = jtfShipAddress1.getText();
+            String shipCity = jtfShipCity1.getText();
+            String shipRegion = jtfShipRegion1.getText();
+            String shipPostalCode = jtfShipPostalCode1.getText();
+            String shipCountry = jtfShipCountry1.getText();
             
             Orders o = new Orders(orderID, customerID, employeeID, orderDate, requiredDate, shippedDate, shipVia, freight, 
                                 shipName, shipAddress, shipCity, shipRegion, shipPostalCode, shipCountry);

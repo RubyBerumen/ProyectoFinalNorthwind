@@ -631,7 +631,7 @@ public class MenuShippers extends javax.swing.JPanel {
         if(jtfShipperID1.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane, "Debes Ingresar el id del proveedor");
         }else{
-            int id = Integer.parseInt(jtfShipperID.getText());
+            int id = Integer.parseInt(jtfShipperID1.getText());
 
             if(sDAO.borrarRegistro(id)) {
                 JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
