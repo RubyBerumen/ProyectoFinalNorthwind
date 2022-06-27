@@ -1541,11 +1541,18 @@ public class MenuCustomers extends javax.swing.JPanel {
     
    private void validacionString(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
 	int code = evt.getKeyCode();
+        char car = evt.getKeyChar();
+        
 	if (code == KeyEvent.VK_ENTER) {
             caja.setEditable(true);
         }else if ((caja.getText().equals("") || !(caja.getText().charAt(caja.getText().length() - 1) == ' ' && code == KeyEvent.VK_SPACE))
 		&& (caja.getText().length() < limite || code == KeyEvent.VK_BACK_SPACE)) {
-		caja.setEditable(true);
+            if(Character.isLetter(car)|| code == KeyEvent.VK_BACK_SPACE || code == KeyEvent.VK_SPACE){
+                caja.setEditable(true);
+            }else{
+                caja.setEditable(false);
+            }
+		
 	} else {
             caja.setEditable(false);
 	}

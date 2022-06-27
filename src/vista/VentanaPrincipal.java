@@ -47,7 +47,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpMenu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jpHorasEmpleado = new javax.swing.JPanel();
+        jpOrdersByCustomers = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jpCustomers = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -71,42 +71,42 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 68, 120, -1));
         jpMenu.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 105, 177, 12));
 
-        jpHorasEmpleado.setBackground(new java.awt.Color(133, 39, 71));
-        jpHorasEmpleado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpHorasEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
+        jpOrdersByCustomers.setBackground(new java.awt.Color(133, 39, 71));
+        jpOrdersByCustomers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jpOrdersByCustomers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jpHorasEmpleadoMouseClicked(evt);
+                jpOrdersByCustomersMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jpHorasEmpleadoMouseEntered(evt);
+                jpOrdersByCustomersMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jpHorasEmpleadoMouseExited(evt);
+                jpOrdersByCustomersMouseExited(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText(".");
+        jLabel5.setText("Orders by Customer");
 
-        javax.swing.GroupLayout jpHorasEmpleadoLayout = new javax.swing.GroupLayout(jpHorasEmpleado);
-        jpHorasEmpleado.setLayout(jpHorasEmpleadoLayout);
-        jpHorasEmpleadoLayout.setHorizontalGroup(
-            jpHorasEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpHorasEmpleadoLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
-        );
-        jpHorasEmpleadoLayout.setVerticalGroup(
-            jpHorasEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpHorasEmpleadoLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+        javax.swing.GroupLayout jpOrdersByCustomersLayout = new javax.swing.GroupLayout(jpOrdersByCustomers);
+        jpOrdersByCustomers.setLayout(jpOrdersByCustomersLayout);
+        jpOrdersByCustomersLayout.setHorizontalGroup(
+            jpOrdersByCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpOrdersByCustomersLayout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
                 .addComponent(jLabel5)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
+        );
+        jpOrdersByCustomersLayout.setVerticalGroup(
+            jpOrdersByCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpOrdersByCustomersLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel5)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jpMenu.add(jpHorasEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 240, 70));
+        jpMenu.add(jpOrdersByCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 240, 70));
 
         jpCustomers.setBackground(new java.awt.Color(133, 39, 71));
         jpCustomers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -275,13 +275,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpShippers.setBackground(new Color(133,39,71));
     }//GEN-LAST:event_jpShippersMouseExited
 
-    private void jpHorasEmpleadoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpHorasEmpleadoMouseEntered
-        jpHorasEmpleado.setBackground(new Color(162,65,107));
-    }//GEN-LAST:event_jpHorasEmpleadoMouseEntered
+    private void jpOrdersByCustomersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpOrdersByCustomersMouseEntered
+        jpOrdersByCustomers.setBackground(new Color(162,65,107));
+    }//GEN-LAST:event_jpOrdersByCustomersMouseEntered
 
-    private void jpHorasEmpleadoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpHorasEmpleadoMouseExited
-        jpHorasEmpleado.setBackground(new Color(133,39,71));
-    }//GEN-LAST:event_jpHorasEmpleadoMouseExited
+    private void jpOrdersByCustomersMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpOrdersByCustomersMouseExited
+        jpOrdersByCustomers.setBackground(new Color(133,39,71));
+    }//GEN-LAST:event_jpOrdersByCustomersMouseExited
 
     private void jpCustomersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpCustomersMouseClicked
         MenuCustomers mc = new MenuCustomers();
@@ -304,13 +304,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jpShippersMouseClicked
 
-    private void jpHorasEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpHorasEmpleadoMouseClicked
-
-        /*MenuHorasEmpleado mhe = new MenuHorasEmpleado();
-        mostrarPanelMenuABCC(mhe);
-        mhe.mostrarTabla();*/
+    private void jpOrdersByCustomersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpOrdersByCustomersMouseClicked
+        MenuOrdersByCustomers moc = new MenuOrdersByCustomers();
+        mostrarPanelMenuABCC(moc);
+        moc.mostrarTabla();
         
-    }//GEN-LAST:event_jpHorasEmpleadoMouseClicked
+    }//GEN-LAST:event_jpOrdersByCustomersMouseClicked
 
     
         
@@ -376,9 +375,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jlTrabajaEn;
     private javax.swing.JPanel jpContenido;
     private javax.swing.JPanel jpCustomers;
-    private javax.swing.JPanel jpHorasEmpleado;
     private javax.swing.JPanel jpMenu;
     private javax.swing.JPanel jpOrders;
+    private javax.swing.JPanel jpOrdersByCustomers;
     private javax.swing.JPanel jpShippers;
     // End of variables declaration//GEN-END:variables
 
