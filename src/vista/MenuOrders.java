@@ -6,6 +6,7 @@ package vista;
 
 import controlador.CustomerDAO;
 import controlador.OrderDAO;
+import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
@@ -18,6 +19,7 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import modelo.Orders;
 //import modelo.Reporte;
+import modelo.Grafica;
 
 /**
  *
@@ -198,6 +200,8 @@ public class MenuOrders extends javax.swing.JPanel {
         jcbDiaOD2 = new javax.swing.JComboBox<>();
         RequiredDate2 = new javax.swing.JLabel();
         ShipVia2 = new javax.swing.JLabel();
+        jpGrafica = new javax.swing.JPanel();
+        btnGráfica = new javax.swing.JButton();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -1541,6 +1545,23 @@ public class MenuOrders extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
+        jpGrafica.setBackground(new java.awt.Color(245, 205, 185));
+        jpGrafica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnGráfica.setBackground(new java.awt.Color(162, 65, 107));
+        btnGráfica.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnGráfica.setForeground(new java.awt.Color(255, 255, 255));
+        btnGráfica.setText("Generar gráfica");
+        btnGráfica.setBorder(null);
+        btnGráfica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGráficaActionPerformed(evt);
+            }
+        });
+        jpGrafica.add(btnGráfica, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 130, 30));
+
+        jtpContenidoABCC.addTab("Gráfica", jpGrafica);
+
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 420));
 
         jpTabla.setBackground(new java.awt.Color(255, 255, 255));
@@ -2201,6 +2222,18 @@ public class MenuOrders extends javax.swing.JPanel {
         mostrarTabla(sql);
     }//GEN-LAST:event_jcbAñoSD2ItemStateChanged
 
+    private void btnGráficaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGráficaActionPerformed
+        Grafica g = new Grafica();
+     
+        if(g.dibujar()!=null){
+           jpGrafica.setLayout(new BorderLayout());
+           jpGrafica.add(g.dibujar(),new BorderLayout().NORTH);
+           
+       }else{
+           System.out.println("No funciona");
+       }
+    }//GEN-LAST:event_btnGráficaActionPerformed
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -2373,6 +2406,7 @@ public class MenuOrders extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar2;
     private javax.swing.JButton btnBorrar3;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnGráfica;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -2446,6 +2480,7 @@ public class MenuOrders extends javax.swing.JPanel {
     private javax.swing.JPanel jpBajas;
     private javax.swing.JPanel jpCambios;
     private javax.swing.JPanel jpConsultas;
+    private javax.swing.JPanel jpGrafica;
     private javax.swing.JPanel jpTabla;
     private javax.swing.JPanel jpTitulo;
     private javax.swing.JTextField jtfCustomerID;

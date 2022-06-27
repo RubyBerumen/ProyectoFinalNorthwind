@@ -127,7 +127,7 @@ public class MenuOrdersByCustomers extends javax.swing.JPanel {
                     + "password=aguacate;"
                     + "encrypt=true;trustServerCertificate=true;";
         
-        String sql = "SELECT * FROM \"Orders by client\";";
+        String sql = "exec [dbo].[sp_OrdersByClient]";
         
         
 	try {
@@ -139,12 +139,6 @@ public class MenuOrdersByCustomers extends javax.swing.JPanel {
 	}
         jScrollPane1.getViewport().remove(jTable1);
         jTable1 = new JTable(modeloDatos);
-        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                
-            }
-        });
         jScrollPane1.getViewport().add(jTable1);
         
     }

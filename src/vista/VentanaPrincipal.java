@@ -94,16 +94,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpOrdersByCustomersLayout.setHorizontalGroup(
             jpOrdersByCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpOrdersByCustomersLayout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addComponent(jLabel5)
-                .addGap(28, 28, 28))
+                .addGap(27, 27, 27))
         );
         jpOrdersByCustomersLayout.setVerticalGroup(
             jpOrdersByCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpOrdersByCustomersLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel5)
-                .addContainerGap(27, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpOrdersByCustomersLayout.createSequentialGroup()
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         jpMenu.add(jpOrdersByCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 240, 70));

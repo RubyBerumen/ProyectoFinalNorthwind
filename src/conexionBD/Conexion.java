@@ -36,8 +36,8 @@ public class Conexion {
 
             conexionBD = DriverManager.getConnection(url);
             System.out.println("conexion exitosa");
-            //conexionBD.setAutoCommit(false);
-            //sp = conexionBD.setSavepoint("Inicio");
+            conexionBD.setAutoCommit(false);
+            sp = conexionBD.setSavepoint("start");
 
         } catch (SQLException e) {
             System.out.println("Error de Conexion");
@@ -70,10 +70,10 @@ public class Conexion {
             pstm = conexionBD.prepareStatement(sql);
             System.out.println(sql);
             pstm.executeUpdate();
-            //conexionBD.commit();
+            conexionBD.commit();
             return true;
         } catch (Exception ex) {
-            //conexionBD.rollback(sp);
+            conexionBD.rollback();
             ex.printStackTrace();
         }
         return false;
@@ -100,10 +100,10 @@ public class Conexion {
             pstm.setString(2, shipper.getPhone());
             pstm.setInt(3, shipper.getShipperID());
             pstm.executeUpdate();
-            //conexionBD.commit();
+            conexionBD.commit();
             return true;
         } catch (Exception ex) {
-            //conexionBD.rollback(sp);
+            conexionBD.rollback();
             logger.log(Level.SEVERE, "Error al actualizar el proveedor", ex);
         }
         return false;
@@ -116,10 +116,10 @@ public class Conexion {
             pstm.setString(1, shipper.getCompanyName());
             pstm.setString(2, shipper.getPhone());
             pstm.executeUpdate();
-            //conexionBD.commit();
+            conexionBD.commit();
             return true;
         } catch (Exception ex) {
-            //conexionBD.rollback(sp);
+            conexionBD.rollback();
             logger.log(Level.SEVERE, "Error al insertar el proveedor", ex);
         }
         return false;
@@ -145,10 +145,10 @@ public class Conexion {
             pstm.setString(11, customer.getCustomerID());
             System.out.println(customer.toString());
             pstm.executeUpdate();
-            //conexionBD.commit();
+            conexionBD.commit();
             return true;
         } catch (Exception ex) {
-        	//conexionBD.rollback(sp);
+        	conexionBD.rollback();
         	logger.log(Level.SEVERE,"Error al modificar el cliente",ex);
         }
         return false;
@@ -172,10 +172,10 @@ public class Conexion {
             pstm.setString(11, customer.getCustomerID());
             
             pstm.executeUpdate();
-            //conexionBD.commit();
+            conexionBD.commit();
             return true;
         } catch (Exception ex) {
-        	//conexionBD.rollback(sp);
+        	conexionBD.rollback();
         	logger.log(Level.SEVERE,"Error al insertar el cliente",ex);
         }
         return false;
@@ -202,10 +202,10 @@ public class Conexion {
             pstm.setString(13, order.getShipCountry());
             pstm.setInt(14, order.getOrderID());
             pstm.executeUpdate();
-            //conexionBD.commit();
+            conexionBD.commit();
             return true;
         } catch (Exception ex) {
-        	//conexionBD.rollback(sp);
+        	conexionBD.rollback();
         	logger.log(Level.SEVERE,"Error al modificar el pedido",ex);
         }
         return false;
@@ -232,10 +232,10 @@ public class Conexion {
             pstm.setString(13, order.getShipCountry());
             
             pstm.executeUpdate();
-            //conexionBD.commit();
+            conexionBD.commit();
             return true;
         } catch (Exception ex) {
-        	//conexionBD.rollback(sp);
+        	conexionBD.rollback();
         	logger.log(Level.SEVERE,"Error al insertar el pedido",ex);
         }
         return false;
