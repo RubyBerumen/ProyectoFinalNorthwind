@@ -49,10 +49,10 @@ public class Grafica {
 
                 //dibujamos el grafico
 
-                JFreeChart chart= ChartFactory.createPieChart("Grafico de cantidad de envíos por país", dataset, true, true, false);
+                JFreeChart chart= ChartFactory.createPieChart("Gráfica de cantidad de envíos por país", dataset, true, true, false);
                 ChartPanel panel = new ChartPanel(chart);
                 panel.setMouseWheelEnabled(true);
-                panel.setPreferredSize(new Dimension (600,800));
+                panel.setPreferredSize(new Dimension (400,600));
                 
                 return panel;
                 

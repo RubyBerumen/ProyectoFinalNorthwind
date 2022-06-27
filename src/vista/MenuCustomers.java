@@ -1153,7 +1153,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfRegionKeyPressed
 
     private void jtfAddressKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAddressKeyPressed
-        validacionString(evt, 60 ,jtfAddress);
+        validacionDirección(evt, 60 ,jtfAddress);
     }//GEN-LAST:event_jtfAddressKeyPressed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
@@ -1191,7 +1191,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhoneKeyPressed
 
     private void jtfCountryKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCountryKeyPressed
-        
+        validacionLetras(evt, jtfCountry, 15);
     }//GEN-LAST:event_jtfCountryKeyPressed
 
     private void jtfCityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCityKeyPressed
@@ -1223,11 +1223,11 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfCustomerIDActionPerformed
 
     private void jtfPostalCodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPostalCodeKeyPressed
-        validacionNumeros(evt, jtfPostalCode, 5);
+        validacionCodigoP(evt, 10, jtfPostalCode);
     }//GEN-LAST:event_jtfPostalCodeKeyPressed
 
     private void jtfFaxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFaxKeyPressed
-        //validacionString(evt, jtfFax);
+        validacionTelefono(evt, 24, jtfFax);
     }//GEN-LAST:event_jtfFaxKeyPressed
 
     private void jtfFaxKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFaxKeyReleased
@@ -1267,7 +1267,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfContactTitle2KeyPressed
 
     private void jtfAddress2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAddress2KeyPressed
-        validacionString(evt, 60 ,jtfAddress2);
+        validacionDirección(evt, 60 ,jtfAddress2);
     }//GEN-LAST:event_jtfAddress2KeyPressed
 
     private void jtfCity2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCity2KeyPressed
@@ -1279,11 +1279,11 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfRegion2KeyPressed
 
     private void jtfPostalCode2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPostalCode2KeyPressed
-        // TODO add your handling code here:
+        validacionCodigoP(evt, 10, jtfPostalCode2);
     }//GEN-LAST:event_jtfPostalCode2KeyPressed
 
     private void jtfCountry2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCountry2KeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfCountry2, 15);
     }//GEN-LAST:event_jtfCountry2KeyPressed
 
     private void jtfPhone2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone2KeyPressed
@@ -1295,7 +1295,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhone2KeyReleased
 
     private void jtfFax2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFax2KeyPressed
-        // TODO add your handling code here:
+        validacionTelefono(evt, 24, jtfFax2);
     }//GEN-LAST:event_jtfFax2KeyPressed
 
     private void jtfFax2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFax2KeyReleased
@@ -1327,11 +1327,11 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfContactName3KeyPressed
 
     private void jtfContactTitle3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfContactTitle3KeyPressed
-        validacionString(evt, 30, jtfContactTitle);
+       validacionString(evt, 30, jtfContactTitle3);
     }//GEN-LAST:event_jtfContactTitle3KeyPressed
 
     private void jtfAddress3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAddress3KeyPressed
-        validacionString(evt, 60 ,jtfAddress3);
+        validacionDirección(evt, 60 ,jtfAddress3);
     }//GEN-LAST:event_jtfAddress3KeyPressed
 
     private void jtfCity3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCity3KeyPressed
@@ -1343,11 +1343,11 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfRegion3KeyPressed
 
     private void jtfPostalCode3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPostalCode3KeyPressed
-        // TODO add your handling code here:
+        validacionCodigoP(evt, 10, jtfPostalCode3);
     }//GEN-LAST:event_jtfPostalCode3KeyPressed
 
     private void jtfCountry3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCountry3KeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfCountry3, 15);
     }//GEN-LAST:event_jtfCountry3KeyPressed
 
     private void jtfPhone3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPhone3KeyPressed
@@ -1361,7 +1361,7 @@ public class MenuCustomers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhone3KeyReleased
 
     private void jtfFax3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFax3KeyPressed
-        // TODO add your handling code here:
+        validacionTelefono(evt, 24, jtfFax3);
     }//GEN-LAST:event_jtfFax3KeyPressed
 
     private void jtfFax3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFax3KeyReleased
@@ -1464,51 +1464,20 @@ public class MenuCustomers extends javax.swing.JPanel {
     
     
     public void obtenerRegistroTabla(){
-        jtfCustomerID.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        
         jtfCustomerID1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
         jtfCustomerID2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
-        jtfCustomerID3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
-        
-        jtfCompanyName.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
         jtfCompanyName2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
-        jtfCompanyName3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
-        
-        jtfContactName.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
         jtfContactName2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
-        jtfContactName3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
-        
-        jtfContactTitle.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
-        jtfContactTitle2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
-        jtfContactTitle3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
-        
-        jtfAddress.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),4));
+        jtfContactTitle2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3)); 
         jtfAddress2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),4));
-        jtfAddress3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),4));
-        
-        jtfCity.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
-        jtfCity2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
-        jtfCity3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
-        
-        jtfRegion.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
+        jtfCity2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5)); 
         jtfRegion2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
-        jtfRegion3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
-        
-        jtfPostalCode.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
         jtfPostalCode2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
-        jtfPostalCode3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
-
-        jtfCountry.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
         jtfCountry2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
-        jtfCountry3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
-
-        jtfPhone.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
         jtfPhone2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
-        jtfPhone3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
-
-        jtfFax.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),10));
         jtfFax2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),10));
-        jtfFax3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),10));
-
+        
     }
     
     
@@ -1572,7 +1541,39 @@ public class MenuCustomers extends javax.swing.JPanel {
             }
 	}
     
-    
+    private void validacionDirección(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+            int code = evt.getKeyCode();
+            char car = evt.getKeyChar();
+            if (code == KeyEvent.VK_ENTER) {
+		caja.setEditable(true);
+            }else if((Character.isLetter(car))&&caja.getText().length()<limite||(car==KeyEvent.VK_BACK_SPACE)){
+            caja.setEditable(true);
+        
+            } else if (((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9') || evt.getKeyChar() == '/'|| evt.getKeyChar() == '.'|| evt.getKeyChar() == ' ') && caja.getText().length() < limite) {
+		caja.setEditable(true);
+            } else if (code == KeyEvent.VK_BACK_SPACE) {
+		caja.setEditable(true);
+            } else {
+		caja.setEditable(false);
+            }
+	}
+     
+    private void validacionCodigoP(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+            int code = evt.getKeyCode();
+            char car = evt.getKeyChar();
+            if (code == KeyEvent.VK_ENTER) {
+		caja.setEditable(true);
+            }else if((Character.isLetter(car))&&caja.getText().length()<limite||(car==KeyEvent.VK_BACK_SPACE)){
+            caja.setEditable(true);
+        
+            } else if (((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9') || evt.getKeyChar() == '-'|| evt.getKeyChar() == ' ') && caja.getText().length() < limite) {
+		caja.setEditable(true);
+            } else if (code == KeyEvent.VK_BACK_SPACE) {
+		caja.setEditable(true);
+            } else {
+		caja.setEditable(false);
+            }
+	}
 
     
 

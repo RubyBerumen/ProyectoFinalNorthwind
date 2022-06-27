@@ -556,7 +556,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhone3ActionPerformed
 
     private void jtfCompanyName3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName3KeyPressed
-        validacionString(evt,40,jtfCompanyName3);
+        validacionString1(evt,40,jtfCompanyName3);
     }//GEN-LAST:event_jtfCompanyName3KeyPressed
 
     private void jtfCompanyName3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyName3ActionPerformed
@@ -584,7 +584,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhone2ActionPerformed
 
     private void jtfCompanyName2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyName2KeyPressed
-        validacionString(evt,40,jtfCompanyName2);
+        validacionString1(evt,40,jtfCompanyName2);
     }//GEN-LAST:event_jtfCompanyName2KeyPressed
 
     private void jtfCompanyName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyName2ActionPerformed
@@ -691,7 +691,7 @@ public class MenuShippers extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfPhoneActionPerformed
 
     private void jtfCompanyNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCompanyNameKeyPressed
-        validacionString(evt,40,jtfCompanyName);
+        validacionString1(evt,40,jtfCompanyName);
     }//GEN-LAST:event_jtfCompanyNameKeyPressed
 
     private void jtfCompanyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCompanyNameActionPerformed
@@ -792,14 +792,14 @@ public class MenuShippers extends javax.swing.JPanel {
     }
     
     private void validacionString(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
-		int code = evt.getKeyCode();
-		if ((caja.getText().equals("") || !(caja.getText().charAt(caja.getText().length() - 1) == ' ' && code == KeyEvent.VK_SPACE))
-				&& (caja.getText().length() < limite || code == KeyEvent.VK_BACK_SPACE)) {
+	int code = evt.getKeyCode();
+	if ((caja.getText().equals("") || !(caja.getText().charAt(caja.getText().length() - 1) == ' ' && code == KeyEvent.VK_SPACE))
+		&& (caja.getText().length() < limite || code == KeyEvent.VK_BACK_SPACE)) {
 			caja.setEditable(true);
-		} else {
-			caja.setEditable(false);
-		}
+	} else {
+            caja.setEditable(false);
 	}
+    }
     
     
     private void validacionTelefono(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
@@ -813,7 +813,40 @@ public class MenuShippers extends javax.swing.JPanel {
 		} else {
 			caja.setEditable(false);
 		}
+    }
+    
+    /*private void validacionString1(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+        char car = evt.getKeyChar();
+	if(Character.isLetter(car)||(car==KeyEvent.VK_BACK_SPACE)){
+            caja.setEditable(true);
+        }else if (car == KeyEvent.VK_ENTER) {
+            caja.setEditable(true);
+	} else if ( evt.getKeyChar() == ' ' && caja.getText().length() < limite) {
+            caja.setEditable(true);
+	} else if (car == KeyEvent.VK_BACK_SPACE) {
+            caja.setEditable(true);
+	} else {
+            caja.setEditable(false);
 	}
+    }*/
+       private void validacionString1(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+	int code = evt.getKeyCode();
+        char car = evt.getKeyChar();
+        
+	if (code == KeyEvent.VK_ENTER) {
+            caja.setEditable(true);
+        }else if ((caja.getText().equals("") || !(caja.getText().charAt(caja.getText().length() - 1) == ' ' && code == KeyEvent.VK_SPACE))
+		&& (caja.getText().length() < limite || code == KeyEvent.VK_BACK_SPACE)) {
+            if(Character.isLetter(car)|| code == KeyEvent.VK_BACK_SPACE || code == KeyEvent.VK_SPACE){
+                caja.setEditable(true);
+            }else{
+                caja.setEditable(false);
+            }
+		
+	} else {
+            caja.setEditable(false);
+	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CompanyName;

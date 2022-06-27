@@ -1715,15 +1715,15 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfOrderIDKeyPressed
 
     private void jtfCustomerIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerIDKeyPressed
-        validacionLetras(evt, jtfCustomerID);
+        validacionLetras(evt, jtfCustomerID, 5);
     }//GEN-LAST:event_jtfCustomerIDKeyPressed
 
     private void jtfShipAddressKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipAddressKeyPressed
-        
+        validacionDirección(evt, 60 ,jtfShipAddress);
     }//GEN-LAST:event_jtfShipAddressKeyPressed
 
     private void jtfShipCityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCityKeyPressed
-        
+        validacionString(evt, 15, jtfShipCity);
     }//GEN-LAST:event_jtfShipCityKeyPressed
 
     private void jtfOrderID3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID3KeyPressed
@@ -1808,7 +1808,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jcbSVActionPerformed
 
     private void jtfShipNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipNameKeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 30, jtfShipName);
     }//GEN-LAST:event_jtfShipNameKeyPressed
 
     private void jtfFreightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfFreightActionPerformed
@@ -1816,7 +1816,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFreightActionPerformed
 
     private void jtfFreightKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFreightKeyPressed
-        // TODO add your handling code here:
+        validacionDouble(evt, 1000.00, 4, 2, jtfFreight);
     }//GEN-LAST:event_jtfFreightKeyPressed
 
     private void jtfFreightKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFreightKeyTyped
@@ -1828,7 +1828,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipRegionActionPerformed
 
     private void jtfShipRegionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipRegionKeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfShipRegion);
     }//GEN-LAST:event_jtfShipRegionKeyPressed
 
     private void jtfShipRegionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipRegionKeyTyped
@@ -1840,7 +1840,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipPostalCodeActionPerformed
 
     private void jtfShipPostalCodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipPostalCodeKeyPressed
-        // TODO add your handling code here:
+        validacionCodigoP(evt, 10, jtfShipPostalCode);
     }//GEN-LAST:event_jtfShipPostalCodeKeyPressed
 
     private void jtfShipPostalCodeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipPostalCodeKeyTyped
@@ -1848,7 +1848,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipPostalCodeKeyTyped
 
     private void jtfShipCountryKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCountryKeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfShipCountry, 15);
     }//GEN-LAST:event_jtfShipCountryKeyPressed
 
     private void jtfShipCountryKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCountryKeyReleased
@@ -1864,7 +1864,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfOrderID1ActionPerformed
 
     private void jtfOrderID1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID1KeyPressed
-        // TODO add your handling code here:
+        validacionNumeros(evt, jtfOrderID1,5);
     }//GEN-LAST:event_jtfOrderID1KeyPressed
 
     private void jtfOrderID1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfOrderID1KeyTyped
@@ -1872,7 +1872,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfOrderID1KeyTyped
 
     private void jtfCustomerID1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID1KeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfCustomerID1, 5);
     }//GEN-LAST:event_jtfCustomerID1KeyPressed
 
     private void jcbDiaOD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDiaOD1ActionPerformed
@@ -1920,7 +1920,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFreight1ActionPerformed
 
     private void jtfFreight1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFreight1KeyPressed
-        // TODO add your handling code here:
+        validacionDouble(evt, 1000.00, 4, 2, jtfFreight1);
     }//GEN-LAST:event_jtfFreight1KeyPressed
 
     private void jtfFreight1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFreight1KeyTyped
@@ -1928,11 +1928,11 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFreight1KeyTyped
 
     private void jtfShipName1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipName1KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 30, jtfShipName1);
     }//GEN-LAST:event_jtfShipName1KeyPressed
 
     private void jtfShipAddress1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipAddress1KeyPressed
-        // TODO add your handling code here:
+        validacionDirección(evt, 60 ,jtfShipAddress1);
     }//GEN-LAST:event_jtfShipAddress1KeyPressed
 
     private void jtfShipAddress1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipAddress1KeyReleased
@@ -1940,7 +1940,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipAddress1KeyReleased
 
     private void jtfShipCity1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCity1KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfShipCity1);
     }//GEN-LAST:event_jtfShipCity1KeyPressed
 
     private void jtfShipCity1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCity1KeyReleased
@@ -1952,7 +1952,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipRegion1ActionPerformed
 
     private void jtfShipRegion1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipRegion1KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfShipRegion1);
     }//GEN-LAST:event_jtfShipRegion1KeyPressed
 
     private void jtfShipRegion1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipRegion1KeyTyped
@@ -1964,7 +1964,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipPostalCode1ActionPerformed
 
     private void jtfShipPostalCode1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipPostalCode1KeyPressed
-        // TODO add your handling code here:
+        validacionCodigoP(evt, 10, jtfShipPostalCode1);
     }//GEN-LAST:event_jtfShipPostalCode1KeyPressed
 
     private void jtfShipPostalCode1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipPostalCode1KeyTyped
@@ -1972,7 +1972,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipPostalCode1KeyTyped
 
     private void jtfShipCountry1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCountry1KeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfShipCountry1, 15);
     }//GEN-LAST:event_jtfShipCountry1KeyPressed
 
     private void jtfShipCountry1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCountry1KeyReleased
@@ -1988,7 +1988,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jcbAñoSD2ActionPerformed
 
     private void jtfShipAddress2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipAddress2KeyPressed
-        // TODO add your handling code here:
+        validacionDirección(evt, 60 ,jtfShipAddress2);
     }//GEN-LAST:event_jtfShipAddress2KeyPressed
 
     private void jtfShipAddress2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipAddress2KeyReleased
@@ -2006,7 +2006,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipPostalCode2ActionPerformed
 
     private void jtfShipPostalCode2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipPostalCode2KeyPressed
-        // TODO add your handling code here:
+        validacionCodigoP(evt, 10, jtfShipPostalCode2);
     }//GEN-LAST:event_jtfShipPostalCode2KeyPressed
 
     private void jtfShipPostalCode2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipPostalCode2KeyTyped
@@ -2014,7 +2014,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipPostalCode2KeyTyped
 
     private void jtfShipCountry2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCountry2KeyPressed
-        // TODO add your handling code here:
+        validacionLetras(evt, jtfShipCountry2, 15);
     }//GEN-LAST:event_jtfShipCountry2KeyPressed
 
     private void jtfShipCountry2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCountry2KeyReleased
@@ -2044,11 +2044,11 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfOrderID2KeyTyped
 
     private void jtfShipName2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipName2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 30, jtfShipName2);
     }//GEN-LAST:event_jtfShipName2KeyPressed
 
     private void jtfShipCity2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCity2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfShipCity2);
     }//GEN-LAST:event_jtfShipCity2KeyPressed
 
     private void jtfShipCity2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipCity2KeyReleased
@@ -2062,7 +2062,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFreight2ActionPerformed
 
     private void jtfFreight2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFreight2KeyPressed
-        // TODO add your handling code here:
+        validacionDouble(evt, 1000.00, 4, 2, jtfFreight2);
     }//GEN-LAST:event_jtfFreight2KeyPressed
 
     private void jtfFreight2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfFreight2KeyTyped
@@ -2070,7 +2070,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfFreight2KeyTyped
 
     private void jtfCustomerID2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfCustomerID2KeyPressed
-        validacionLetras(evt, jtfCustomerID2);
+        validacionLetras(evt, jtfCustomerID2, 5);
     }//GEN-LAST:event_jtfCustomerID2KeyPressed
 
     private void jcbEmployeeID2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbEmployeeID2ActionPerformed
@@ -2098,7 +2098,7 @@ public class MenuOrders extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfShipRegion2ActionPerformed
 
     private void jtfShipRegion2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipRegion2KeyPressed
-        // TODO add your handling code here:
+        validacionString(evt, 15, jtfShipRegion2);
     }//GEN-LAST:event_jtfShipRegion2KeyPressed
 
     private void jtfShipRegion2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfShipRegion2KeyTyped
@@ -2318,10 +2318,10 @@ public class MenuOrders extends javax.swing.JPanel {
         return m+"/"+d+"/"+a;
     }
     
-    
-    public void validacionLetras(KeyEvent evt, JTextField jtf){  
+
+    public void validacionLetras(KeyEvent evt, JTextField jtf, int lim){  
         char car = evt.getKeyChar();
-	if(Character.isLetter(car)||(car==KeyEvent.VK_BACK_SPACE)){
+        if((Character.isLetter(car))&&jtf.getText().length()<lim||(car==KeyEvent.VK_BACK_SPACE)){
             jtf.setEditable(true);
         }else{
             jtf.setEditable(false);
@@ -2336,20 +2336,90 @@ public class MenuOrders extends javax.swing.JPanel {
             jtf.setEditable(false);
         }  
     }
-    
-    public void validacionString(KeyEvent evt, JTextField jtf){
-        int code = evt.getKeyCode();
-        int limite = 20;
-        if ((jtf.getText().equals("")?true:!(jtf.getText().charAt(jtf.getText().length()-1)==' '&&code==KeyEvent.VK_SPACE))&&(jtf.getText().length()<limite||code==KeyEvent.VK_BACK_SPACE)) {
-                jtf.setEditable(true);
-        }else{
-                jtf.setEditable(false);
-        }
+  
+    private void validacionString(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+	int code = evt.getKeyCode();
+        char car = evt.getKeyChar();
+        
+	if (code == KeyEvent.VK_ENTER) {
+            caja.setEditable(true);
+        }else if ((caja.getText().equals("") || !(caja.getText().charAt(caja.getText().length() - 1) == ' ' && code == KeyEvent.VK_SPACE))
+		&& (caja.getText().length() < limite || code == KeyEvent.VK_BACK_SPACE)) {
+            if(Character.isLetter(car)|| code == KeyEvent.VK_BACK_SPACE || code == KeyEvent.VK_SPACE){
+                caja.setEditable(true);
+            }else{
+                caja.setEditable(false);
+            }
+		
+	} else {
+            caja.setEditable(false);
+	}
     }
     
+    private void validacionDirección(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+            int code = evt.getKeyCode();
+            char car = evt.getKeyChar();
+            if (code == KeyEvent.VK_ENTER) {
+		caja.setEditable(true);
+            }else if((Character.isLetter(car))&&caja.getText().length()<limite||(car==KeyEvent.VK_BACK_SPACE)){
+            caja.setEditable(true);
+        
+            } else if (((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9') || evt.getKeyChar() == '/'|| evt.getKeyChar() == '.'|| evt.getKeyChar() == ' ') && caja.getText().length() < limite) {
+		caja.setEditable(true);
+            } else if (code == KeyEvent.VK_BACK_SPACE) {
+		caja.setEditable(true);
+            } else {
+		caja.setEditable(false);
+            }
+	}
+     
+    private void validacionCodigoP(java.awt.event.KeyEvent evt, int limite, JTextField caja) {
+            int code = evt.getKeyCode();
+            char car = evt.getKeyChar();
+            if (code == KeyEvent.VK_ENTER) {
+		caja.setEditable(true);
+            }else if((Character.isLetter(car))&&caja.getText().length()<limite||(car==KeyEvent.VK_BACK_SPACE)){
+            caja.setEditable(true);
+        
+            } else if (((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9') || evt.getKeyChar() == '-'|| evt.getKeyChar() == ' ') && caja.getText().length() < limite) {
+		caja.setEditable(true);
+            } else if (code == KeyEvent.VK_BACK_SPACE) {
+		caja.setEditable(true);
+            } else {
+		caja.setEditable(false);
+            }
+	}
     
     
-    
+    	private void validacionDouble(java.awt.event.KeyEvent evt, double valorMaximo, int limite1, int limite2,
+			JTextField caja) {
+		int code = evt.getKeyCode();
+		if (code == KeyEvent.VK_ENTER) {
+			caja.setEditable(true);
+		} else if (((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9') && !caja.getText().contains("."))
+				&& caja.getText().length() < (limite1) || (code == KeyEvent.VK_BACK_SPACE)) {
+			double valorCaja = Double.parseDouble(caja.getText() + evt.getKeyChar());
+			if (valorCaja <= valorMaximo) {
+				caja.setEditable(true);
+			} else {
+				caja.setEditable(false);
+			}
+		} else if ((caja.getText().length() < (limite1 + 1))
+				&& (evt.getKeyChar() == '.' && !caja.getText().contains("."))) {
+			
+			caja.setEditable(true);
+		} else if ((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9')
+				 && caja.getText().contains(".")) {
+			double valorCaja = Double.parseDouble(caja.getText() + evt.getKeyChar());
+			if (valorCaja <= valorMaximo) {
+				caja.setEditable(true);
+			} else {
+				caja.setEditable(false);
+			}
+		} else {
+			caja.setEditable(false);
+		}
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CustomerID;
